@@ -1,4 +1,6 @@
-# q5-site
+# 🆀5
+The website for Q5 written in Nuxt.
+https://beta.q-5.ca/
 
 ## Build Setup
 
@@ -13,8 +15,8 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-# generate static project
-$ npm run generate
+# netlify deployment
+$ npm run build && npm run export
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
