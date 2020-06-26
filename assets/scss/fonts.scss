@@ -1,9 +1,18 @@
 
+@font-face {
+    font-family: 'Neue Haas Unica W1G';
+    src: url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff2') format('woff2'),
+        url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
+}
 
-// @font-face {
-//     font-family: 'Neue Haas Grotesk';
-//     src: url("~assets/fonts/neue-haas-grotesk/neue-haas-grotesk-display-thin.woff2") format("woff2");
-//     font-weight: 200;
-//     font-style: normal;
-//     font-display: block;
-// }
+@font-face {
+    font-family: 'Neue Haas Unica W1G';
+    src: url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
+        url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}

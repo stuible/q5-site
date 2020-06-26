@@ -8,9 +8,9 @@
     <meta-logo-spacer>
       <div id="services-container">
         <ul id="services">
-          <li>Web Development</li>
-          <li>Web Development</li>
-          <li>Web Development</li>
+          <li>Web <br> Development</li>
+          <li>Design <br> Strategy</li>
+          <li>Enterprise <br> Solutions</li>
         </ul>
       </div>
     </meta-logo-spacer>
@@ -56,10 +56,26 @@ main {
   list-style: none;
   justify-content: center;
   padding: 0;
+  font-family: 'Neue Haas Unica W1G';
+  font-weight: bold;
+
+  font-size: 0.75em;
+   @include breakpoint(phone) {
+      font-size: 1em;
+  }
+   @include breakpoint(thone) {
+      font-size: 1.5em;
+  }
+   @include breakpoint(phablet) {
+      font-size: 2em;
+  }
+  @include breakpoint(tablet) {
+      font-size: 2.5em;
+  }
 
   li {
     flex-grow: 1;
-    text-align: center;
+    // margin-right: 1em;
   }
 }
 </style>
