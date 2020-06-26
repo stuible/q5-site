@@ -8,9 +8,15 @@
     <meta-logo-spacer>
       <div id="services-container">
         <ul id="services">
-          <li>Web <br> Development</li>
-          <li>Design <br> Strategy</li>
-          <li>Enterprise <br> Solutions</li>
+          <li>
+            Web <br /> Development
+          </li>
+          <li>
+            Design <br /> Strategy
+          </li>
+          <li>
+            Enterprise <br /> Solutions
+          </li>
         </ul>
       </div>
     </meta-logo-spacer>
@@ -23,21 +29,27 @@ export default {};
 </script>
 
 <style lang="scss">
+#top-nav {
+  display: none;
+  @include breakpoint(phone) {
+    display: block;
+  }
+}
+
 #tagline {
-   font-size: 1em;
-   @include breakpoint(phone) {
-      font-size: 1.5em;
+  font-size: 1em;
+  @include breakpoint(phone) {
+    font-size: 1.5em;
   }
-   @include breakpoint(thone) {
-      font-size: 2em;
+  @include breakpoint(thone) {
+    font-size: 2em;
   }
-   @include breakpoint(phablet) {
-      font-size: 3em;
+  @include breakpoint(phablet) {
+    font-size: 3em;
   }
   @include breakpoint(tablet) {
-      font-size: 4em;
+    font-size: 4em;
   }
-
 }
 
 main {
@@ -56,21 +68,21 @@ main {
   list-style: none;
   justify-content: center;
   padding: 0;
-  font-family: 'Neue Haas Unica W1G';
+  font-family: "Neue Haas Unica W1G";
   font-weight: bold;
 
   font-size: 0.75em;
-   @include breakpoint(phone) {
-      font-size: 1em;
+  @include breakpoint(phone) {
+    font-size: 1em;
   }
-   @include breakpoint(thone) {
-      font-size: 1.5em;
+  @include breakpoint(thone) {
+    font-size: 1.5em;
   }
-   @include breakpoint(phablet) {
-      font-size: 2em;
+  @include breakpoint(phablet) {
+    font-size: 2em;
   }
   @include breakpoint(tablet) {
-      font-size: 2.5em;
+    font-size: 2.5em;
   }
 
   li {
