@@ -53,7 +53,7 @@ export default {};
 }
 
 main {
-  margin-top: 10% !important;
+  margin-top: 50px !important;
 }
 
 #services-container {
