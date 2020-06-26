@@ -69,6 +69,7 @@ main {
   justify-content: center;
   padding: 0;
   font-family: "Neue Haas Unica W1G";
+  letter-spacing: -0.05em;
   font-weight: bold;
 
   font-size: 0.75em;
