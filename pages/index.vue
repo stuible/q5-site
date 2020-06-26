@@ -9,18 +9,24 @@
       <div id="services-container">
         <ul id="services">
           <li>
-            Web <br /> Development
+            Web
+            <br />Development
           </li>
           <li>
-            Design <br /> Strategy
+            Design
+            <br />Strategy
           </li>
           <li>
-            Enterprise <br /> Solutions
+            Enterprise
+            <br />Solutions
           </li>
         </ul>
       </div>
     </meta-logo-spacer>
-    <meta-logo-bottom />
+    <meta-logo-bottom>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis exercitationem maxime quisquam enim, magni, 
+        molestiae atque autem obcaecati reiciendis eos laboriosam? Impedit, fuga incidunt optio a animi quibusdam eveniet quia.</p>
+    </meta-logo-bottom>
   </main>
 </template>
 
@@ -68,7 +74,6 @@ main {
   list-style: none;
   justify-content: center;
   padding: 0;
-  font-family: "Neue Haas Unica W1G";
   letter-spacing: -0.05em;
   font-weight: bold;
 

@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="slot-container">
+      <slot></slot>
+    </div>
     <BottomLogo />
   </div>
 </template>
@@ -8,15 +11,24 @@
 import BottomLogo from "~/assets/logo/metaBottom.svg?inline";
 export default {
   components: {
-      BottomLogo
+    BottomLogo
   }
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.slot-container {
+  position: relative;
+  > * {
+    width: 70%;
+    position: absolute;
+    margin-top: 45%;
+    top: 0;
+  }
+}
 svg {
-    display: block;
-    width:100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 </style>
