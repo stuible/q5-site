@@ -27,6 +27,14 @@
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis exercitationem maxime quisquam enim, magni, 
         molestiae atque autem obcaecati reiciendis eos laboriosam? Impedit, fuga incidunt optio a animi quibusdam eveniet quia.</p>
     </meta-logo-bottom>
+    <!-- <meta-logo-bottom>
+      <ul class="client-logos">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </meta-logo-bottom> -->
   </main>
 </template>
 
@@ -96,4 +104,20 @@ main {
     // margin-right: 1em;
   }
 }
+
+// .client-logos {
+//   list-style: none;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+//   gap: 20px 20px;
+//   grid-template-areas: ". ." ". ." ". .";
+//   li {
+//     height: 100px;
+//     width: 100px;
+//     // background-color: black;
+//     // border-radius: 50%;
+//     border: 10px rgb(136, 136, 136) solid;
+//   }
+// }
 </style>
