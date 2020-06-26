@@ -8,13 +8,15 @@
 import MiddleLogo from "~/assets/logo/metaMiddle.svg?inline";
 export default {
   components: {
-      MiddleLogo
+    MiddleLogo
   }
 };
 </script>
 
-<style >
+<style scoped>
 svg {
-    width:100%;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 </style>

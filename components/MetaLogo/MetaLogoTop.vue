@@ -8,13 +8,15 @@
 import TopLogo from "~/assets/logo/metaTop.svg?inline";
 export default {
   components: {
-      TopLogo
+    TopLogo
   }
 };
 </script>
 
-<style >
+<style scoped>
 svg {
-    width:100%;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 </style>
