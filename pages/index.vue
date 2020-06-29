@@ -62,7 +62,11 @@ export default {};
 main {
   margin-top: 50px !important;
 
-  @include breakpoint(phone) {
+  // @include breakpoint(phone) {
+  //   margin-top: 100px !important;
+  // }
+
+  @include breakpoint(thone) {
     margin-top: 150px !important;
   }
 }
@@ -102,19 +106,4 @@ main {
   }
 }
 
-// .client-logos {
-//   list-style: none;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr 1fr 1fr;
-//   gap: 20px 20px;
-//   grid-template-areas: ". ." ". ." ". .";
-//   li {
-//     height: 100px;
-//     width: 100px;
-//     // background-color: black;
-//     // border-radius: 50%;
-//     border: 10px rgb(136, 136, 136) solid;
-//   }
-// }
 </style>
