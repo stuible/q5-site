@@ -23,18 +23,11 @@
         </ul>
       </div>
     </meta-logo-spacer>
-    <meta-logo-bottom>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis exercitationem maxime quisquam enim, magni, 
-        molestiae atque autem obcaecati reiciendis eos laboriosam? Impedit, fuga incidunt optio a animi quibusdam eveniet quia.</p>
-    </meta-logo-bottom>
-    <!-- <meta-logo-bottom>
-      <ul class="client-logos">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </meta-logo-bottom> -->
+    <meta-logo-bottom/>
+    <h2>About</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum, 
+      perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae, 
+      nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.</p>
   </main>
 </template>
 
@@ -68,6 +61,10 @@ export default {};
 
 main {
   margin-top: 50px !important;
+
+  @include breakpoint(phone) {
+    margin-top: 150px !important;
+  }
 }
 
 #services-container {

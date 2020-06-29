@@ -15,11 +15,22 @@ export default {};
   padding-bottom: 224px / 620px * 100%;
   position: relative;
   overflow: hidden;
+
+  @include breakpoint(thone) {
+    position: initial;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding: 100px 0;
+  }
 }
 
 .logo-spacer {
   position: absolute;
   width: 100%;
   height: 100%;
+
+  @include breakpoint(thone) {
+    position: initial;
+  }
 }
 </style>

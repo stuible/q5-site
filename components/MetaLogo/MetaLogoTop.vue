@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="meta-logo-section">
     <TopLogo />
   </div>
 </template>
@@ -14,9 +14,5 @@ export default {
 </script>
 
 <style scoped>
-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
 </style>

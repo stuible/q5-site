@@ -1,0 +1,10 @@
+.meta-logo-section {
+    display: flex;
+    justify-content: center;
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: map-get($breakpoints, phone) - ($container-padding * 2);
+    }
+}
