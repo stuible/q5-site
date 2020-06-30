@@ -21,11 +21,12 @@ header {
   padding: 50px 0 50px 0;
 
   @include breakpoint(thone) {
-    padding: 50px 0 150px 0;
+    padding: 50px 0 200px 0;
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.9) 100%
+      rgba(255, 255, 255, 0.80) 70%,
+      rgba(255, 255, 255, 0.95) 100%
     );
     position: sticky;
     top: 0;
@@ -40,6 +41,7 @@ nav {
   /* justify-self: flex-end; */
   padding: 0.85em;
   border: black 2px solid;
+  // background-color: white;
 
   &:hover {
     background-color: black;
