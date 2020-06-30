@@ -17,24 +17,28 @@
             <br />Strategy
           </li>
           <li>
-            <span>Enterprise
-            <br />Solutions</span>
+            <span>
+              Enterprise
+              <br />Solutions
+            </span>
           </li>
         </ul>
       </div>
     </meta-logo-spacer>
     <meta-logo-bottom />
     <h2>About</h2>
-    <p class="about">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
-      perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
-      nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
-    </p>
-    <p class="about">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Qui quisquam libero voluptatem voluptatum, 
-      repellat tempora quia nulla beatae quis placeat eaque! Odit rerum illo ullam nobis facilis dolorum, minus natus?
-    </p>
+    <div id="about">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
+        perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
+        nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Qui quisquam libero voluptatem voluptatum,
+        repellat tempora quia nulla beatae quis placeat eaque! Odit rerum illo ullam nobis facilis dolorum, minus natus?
+      </p>
+    </div>
   </main>
 </template>
 
@@ -98,7 +102,6 @@ main {
   font-weight: bold;
   justify-content: space-between;
 
-
   font-size: 0.75em;
   @include breakpoint(phone) {
     font-size: 1em;
@@ -114,12 +117,12 @@ main {
   }
 
   li {
+    // &:first-child {
 
-    // &:first-child { 
-      
     // }
 
-    &:last-child, &:first-child {
+    &:last-child,
+    &:first-child {
       width: 50%;
     }
 
@@ -130,7 +133,20 @@ main {
   }
 }
 
-.about {
-  font-size: 2em;
+#about {
+  font-size: 1em;
+
+  @include breakpoint(phone) {
+    font-size: 1em;
+  }
+  @include breakpoint(thone) {
+    font-size: 1.25em;
+  }
+  @include breakpoint(phablet) {
+    font-size: 1.5em;
+  }
+  @include breakpoint(tablet) {
+    font-size: 2em;
+  }
 }
 </style>
