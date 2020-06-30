@@ -25,10 +25,15 @@
     </meta-logo-spacer>
     <meta-logo-bottom />
     <h2>About</h2>
-    <p>
+    <p class="about">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
       perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
       nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
+    </p>
+    <p class="about">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Qui quisquam libero voluptatem voluptatum, 
+      repellat tempora quia nulla beatae quis placeat eaque! Odit rerum illo ullam nobis facilis dolorum, minus natus?
     </p>
   </main>
 </template>
@@ -69,17 +74,13 @@ export default {
   }
 }
 
-main {
-  margin-top: 50px !important;
+// main {
+//   margin-top: 50px !important;
 
-  // @include breakpoint(phone) {
-  //   margin-top: 100px !important;
-  // }
-
-  @include breakpoint(thone) {
-    margin-top: 150px !important;
-  }
-}
+//   @include breakpoint(thone) {
+//     margin-top: 150px !important;
+//   }
+// }
 
 #services-container {
   display: flex;
@@ -114,20 +115,22 @@ main {
 
   li {
 
-    &:first-child { 
+    // &:first-child { 
       
-    }
+    // }
 
     &:last-child, &:first-child {
       width: 50%;
     }
 
     &:last-child {
-      // align-self: flex-end;
-      // flex-grow: auto;
       justify-content: flex-end;
       display: flex;
     }
   }
+}
+
+.about {
+  font-size: 2em;
 }
 </style>
