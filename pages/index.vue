@@ -74,13 +74,13 @@ export default {
   }
 }
 
-// main {
-//   margin-top: 50px !important;
+main {
+  margin-top: 50px !important;
 
-//   @include breakpoint(thone) {
-//     margin-top: 150px !important;
-//   }
-// }
+  @include breakpoint(thone) {
+    margin-top: 0px !important;
+  }
+}
 
 #services-container {
   display: flex;
