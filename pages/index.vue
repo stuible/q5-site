@@ -17,22 +17,31 @@
             <br />Strategy
           </li>
           <li>
-            Enterprise
-            <br />Solutions
+            <span>Enterprise
+            <br />Solutions</span>
           </li>
         </ul>
       </div>
     </meta-logo-spacer>
-    <meta-logo-bottom/>
+    <meta-logo-bottom />
     <h2>About</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum, 
-      perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae, 
-      nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.</p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
+      perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
+      nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
+    </p>
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      // tagline: "Q5 develops digital solutions for growing businesses."
+    };
+  },
+  computed: {}
+};
 </script>
 
 <style lang="scss">
@@ -45,6 +54,7 @@ export default {};
 
 #tagline {
   font-size: 1em;
+
   @include breakpoint(phone) {
     font-size: 1.5em;
   }
@@ -85,6 +95,8 @@ main {
   padding: 0;
   letter-spacing: -0.05em;
   font-weight: bold;
+  justify-content: space-between;
+
 
   font-size: 0.75em;
   @include breakpoint(phone) {
@@ -101,9 +113,21 @@ main {
   }
 
   li {
-    flex-grow: 1;
-    // margin-right: 1em;
+
+    &:first-child { 
+      
+    }
+
+    &:last-child, &:first-child {
+      width: 50%;
+    }
+
+    &:last-child {
+      // align-self: flex-end;
+      // flex-grow: auto;
+      justify-content: flex-end;
+      display: flex;
+    }
   }
 }
-
 </style>
