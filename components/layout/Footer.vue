@@ -28,6 +28,7 @@ footer {
     padding: 50px 0;
     font-weight: bold;
     flex-direction: column;
+    justify-content: space-between;
 
     @include breakpoint(thone) {
       flex-direction: row;
@@ -35,7 +36,7 @@ footer {
   }
 
   li {
-    flex-grow: 1;
+    // flex-grow: 1;
   }
 }
 </style>
