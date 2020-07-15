@@ -6,8 +6,6 @@ const topOffest = 150;
 Vue.directive('fade-out', {
     // When the bound element is inserted into the DOM...
     inserted: function (el) {
-
-
         el.fadeOutDirectiveEvent = () => calculateOpacity(el);
 
         el.classList.add("fade-out-directive");
