@@ -2,26 +2,22 @@ import Vue from 'vue'
 
 const topOffest = 150;
 
-// let theFunction = undefined;
-
-// This directive will cause memory leaks on multiple page sites
-// A new event listner will be created for every compoennet every time it is inserted
-
 // Register a global custom directive called `v-fade-out`
 Vue.directive('fade-out', {
     // When the bound element is inserted into the DOM...
     inserted: function (el) {
 
-        // theFunction = () => calculateOpacity(el)
+
+        el.fadeOutDirectiveEvent = () => calculateOpacity(el);
 
         el.classList.add("fade-out-directive");
 
-        window.addEventListener("scroll", () => calculateOpacity(el), { passive: true });
-        window.addEventListener("resize", () => calculateOpacity(el));
+        window.addEventListener("scroll", el.fadeOutDirectiveEvent, { passive: true });
+        window.addEventListener("resize", el.fadeOutDirectiveEvent);
     },
     unbind: function (el) {
-        // window.removeEventListener("scroll", theFunction);
-        // window.removeEventListener("resize", theFunction);
+        window.removeEventListener("scroll", el.fadeOutDirectiveEvent);
+        window.removeEventListener("resize", el.fadeOutDirectiveEvent);
     }
 })
 
