@@ -1,10 +1,10 @@
 <template>
   <main class="container">
-    <meta-logo-top v-fade-out/>
+    <meta-logo-top v-fade-out />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>Q5 develops digital solutions for growing businesses.</h1>
     </meta-logo-spacer>
-    <meta-logo-middle v-fade-out/>
+    <meta-logo-middle v-fade-out />
     <meta-logo-spacer>
       <div id="services-container" v-fade-out>
         <ul id="services">
@@ -25,19 +25,12 @@
         </ul>
       </div>
     </meta-logo-spacer>
-    <meta-logo-bottom v-fade-out/>
-    <h2 v-fade-out>About</h2>
+    <meta-logo-bottom v-fade-out />
+    <h2 v-fade-out>Us</h2>
     <div id="about">
-      <p v-fade-out>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
-        perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
-        nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
-      </p>
-      <p v-fade-out>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Qui quisquam libero voluptatem voluptatum,
-        repellat tempora quia nulla beatae quis placeat eaque! Odit rerum illo ullam nobis facilis dolorum, minus natus?
-      </p>
+      <p v-fade-out>We are a group of internet nerds that create useful stuff on the internet.</p>
+      <p v-fade-out>We want to work with you to bring concrete results to your business through custom designed solutions.</p>
+      <p v-fade-out>If you have a digital business question, we have the answer.</p>
     </div>
   </main>
 </template>
@@ -54,6 +47,10 @@ export default {
 </script>
 
 <style lang="scss">
+h2 {
+  font-size: 3em;
+}
+
 #top-nav {
   display: none;
   @include breakpoint(phone) {
