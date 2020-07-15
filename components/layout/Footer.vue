@@ -3,16 +3,39 @@
     <div class="container">
       <ul>
         <li>© Q5 2020</li>
-        <li>Instagram</li>
-        <li>Facebook</li>
-        <li>Email</li>
+        <li v-for="(social, index) in socials" v-bind:key="index">
+          <a :href="social.link">{{ social.name }}</a>
+        </li>
       </ul>
     </div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      socials: [
+        {
+          name: "Instagram",
+          link: "https://www.instagram.com/Q5canada/face"
+        },
+        {
+          name: "Facebook",
+          link: "https://www.facebook.com/Q5canada/"
+        },
+        {
+          name: "Email",
+          link: ""
+        }
+      ]
+    };
+  },
+  mounted(){
+    // Add email link with JS after component mounts to avoid people scraping the site
+    this.socials.find(item => item.name == 'Email').link = 'mailto:contact' + '@q-5.ca'
+  }
+};
 </script>
 
 <style lang="scss">
