@@ -26,12 +26,29 @@
       </div>
     </meta-logo-spacer>
     <meta-logo-bottom v-fade-out />
+    <spacer />
     <h2 v-fade-out>Us</h2>
     <div id="about">
-      <p v-fade-out>We are a group of internet nerds that create useful stuff on the internet.</p>
-      <p v-fade-out>We want to work with you to bring concrete results to your business through custom designed solutions.</p>
+      <p
+        v-fade-out
+      >Q5 is a Vancouver based web design and developemnt consulatancy. We are a group of internet nerds that create useful stuff on the internet.</p>
+      <p
+        v-fade-out
+      >We want to work with you to bring concrete results to your business through custom designed solutions.</p>
       <p v-fade-out>If you have a digital business question, we have the answer.</p>
     </div>
+    <spacer />
+    <h2>Projects</h2>
+    <ul id="projects">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </main>
 </template>
 
@@ -144,6 +161,30 @@ main {
   }
   @include breakpoint(tablet) {
     font-size: 2em;
+  }
+}
+
+#projects {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em 2em;
+
+  @include breakpoint(phone) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(phablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  li {
+    height: 50px;
+    background-color: black;
   }
 }
 </style>
