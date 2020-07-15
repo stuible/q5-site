@@ -43,6 +43,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {src: '~/plugins/v-fade-out.js',}
   ],
   /*
   ** Auto import components

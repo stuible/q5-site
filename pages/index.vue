@@ -1,12 +1,12 @@
 <template>
   <main class="container">
-    <meta-logo-top />
+    <meta-logo-top v-fade-out/>
     <meta-logo-spacer>
-      <h1 id="tagline">Q5 develops digital solutions for growing businesses.</h1>
+      <h1 id="tagline" v-fade-out>Q5 develops digital solutions for growing businesses.</h1>
     </meta-logo-spacer>
-    <meta-logo-middle />
+    <meta-logo-middle v-fade-out/>
     <meta-logo-spacer>
-      <div id="services-container">
+      <div id="services-container" v-fade-out>
         <ul id="services">
           <li>
             Web
@@ -25,15 +25,15 @@
         </ul>
       </div>
     </meta-logo-spacer>
-    <meta-logo-bottom />
-    <h2>About</h2>
+    <meta-logo-bottom v-fade-out/>
+    <h2 v-fade-out>About</h2>
     <div id="about">
-      <p>
+      <p v-fade-out>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum,
         perferendis dolores cupiditate repudiandae dolorem natus eum? Repudiandae,
         nam architecto, error nostrum ut at voluptates voluptate asperiores expedita maiores assumenda.
       </p>
-      <p>
+      <p v-fade-out>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
         Qui quisquam libero voluptatem voluptatum,
         repellat tempora quia nulla beatae quis placeat eaque! Odit rerum illo ullam nobis facilis dolorum, minus natus?

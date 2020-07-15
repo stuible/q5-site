@@ -22,12 +22,12 @@ header {
 
   @include breakpoint(thone) {
     padding: 50px 0 200px 0;
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.80) 70%,
-      rgba(255, 255, 255, 0.95) 100%
-    );
+    // background: linear-gradient(
+    //   0deg,
+    //   rgba(255, 255, 255, 0) 0%,
+    //   rgba(255, 255, 255, 0.80) 70%,
+    //   rgba(255, 255, 255, 0.95) 100%
+    // );
     position: sticky;
     top: 0;
   }

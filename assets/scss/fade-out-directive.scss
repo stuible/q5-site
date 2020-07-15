@@ -1,0 +1,7 @@
+.fade-out-directive {
+    transition: opacity 100ms linear;
+
+    @media (max-width: map-get($breakpoints, thone)) {
+        opacity: 1 !important;
+    }
+}
