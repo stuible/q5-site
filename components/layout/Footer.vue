@@ -22,10 +22,11 @@ footer {
   }
 
   ul {
-    border-top: 5px solid black;
+    // border-top: 5px solid black;
     list-style: none;
     display: flex;
     padding: 50px 0;
+    // font-size: 2em;
     font-weight: bold;
     flex-direction: column;
     justify-content: space-between;
