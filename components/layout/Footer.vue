@@ -18,7 +18,7 @@ export default {
       socials: [
         {
           name: "Instagram",
-          link: "https://www.instagram.com/Q5canada/face"
+          link: "https://www.instagram.com/Q5canada/"
         },
         {
           name: "Facebook",
