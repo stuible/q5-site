@@ -2,7 +2,7 @@
   <header id="top-nav">
     <nav class="container">
       <logo id="nav-logo" />
-      <a id="cta" href>Let's Make Something</a>
+      <a id="cta" :href="email">Let's Make Something</a>
     </nav>
   </header>
 </template>
@@ -12,6 +12,15 @@ import Logo from "~/assets/logo/logo.svg?inline";
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      email: ''
+    };
+  },
+  mounted(){
+    // Add email link with JS after component mounts to avoid people scraping the site
+    this.email = 'mailto:contact' + '@q-5.ca'
   }
 };
 </script>
