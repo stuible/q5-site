@@ -31,24 +31,29 @@
     <div id="about">
       <p
         v-fade-out
-      >Q5 is a Vancouver based web design and development consultancy. We are a group of internet nerds that create useful stuff on the internet.</p>
+      >Q5 is a Vancouver based web design and development consultancy. 
+      We are a group of developers and designers that create useful stuff for the internet and beyond.</p>
       <p
         v-fade-out
       >We want to work with you to bring concrete results to your business through web solutions.</p>
-      <p v-fade-out>If you have a digital business question, we have the answer.</p>
+      <!-- <p v-fade-out> 🧠 🔬 📐 👨‍🎨 👩‍💻 🕸 🏁 🤗</p> -->
     </div>
     <spacer />
-    <h2>Projects</h2>
-    <ul id="projects">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+    <h2 v-fade-out>Projects</h2>
+    <ul id="projects" >
+      <li v-fade-out></li>
+      <li v-fade-out></li>
+      <li v-fade-out></li>
+      <li v-fade-out></li>
     </ul>
+    <spacer />
+    <h2 v-fade-out>Process</h2>
+    <ol id="process" v-fade-out>
+      <li>Research</li>
+      <li>Prototype</li>
+      <li>Build</li>
+      <li>Iterate</li>
+    </ol>
   </main>
 </template>
 
@@ -149,6 +154,7 @@ main {
 
 #about {
   font-size: 1em;
+  max-width: 31em;
 
   @include breakpoint(phone) {
     font-size: 1em;
