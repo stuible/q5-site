@@ -2,7 +2,7 @@
   <footer>
     <div class="container">
       <ul>
-        <li>© Q5 2020</li>
+        <li>© Q5 {{ currentYear }}</li>
         <li v-for="(social, index) in socials" v-bind:key="index">
           <a :href="social.link">{{ social.name }}</a>
         </li>
@@ -18,23 +18,25 @@ export default {
       socials: [
         {
           name: "Instagram",
-          link: "https://www.instagram.com/Q5canada/"
+          link: "https://www.instagram.com/Q5canada/",
         },
         {
           name: "Facebook",
-          link: "https://www.facebook.com/Q5canada/"
+          link: "https://www.facebook.com/Q5canada/",
         },
         {
           name: "Email",
-          link: ""
-        }
-      ]
+          link: "",
+        },
+      ],
+      currentYear: new Date().getFullYear(),
     };
   },
-  mounted(){
+  mounted() {
     // Add email link with JS after component mounts to avoid people scraping the site
-    this.socials.find(item => item.name == 'Email').link = 'mailto:contact' + '@q-5.ca'
-  }
+    this.socials.find((item) => item.name == "Email").link =
+      "mailto:contact" + "@q-5.ca";
+  },
 };
 </script>
 
