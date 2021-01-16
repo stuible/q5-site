@@ -20,11 +20,26 @@ Vue.directive('fade-out', {
 })
 
 function calculateOpacity(el) {
-    console.log('opacity calc triggered');
+    // console.log('opacity calc triggered');
+
+    const height = window.innerHeight;
+
+    const fadeRate = mapNumber(height, 350, 700, 10, 100);
+    // console.log(fadeRate)
+
+
     let distanceFromTop = el.getBoundingClientRect().top - topOffest;
-    let newOpacity = distanceFromTop / 100;
+    let newOpacity = distanceFromTop / fadeRate;
 
     if (newOpacity > 1) el.style.opacity = 1;
     else if (newOpacity < 0) el.style.opacity = 0;
     else el.style.opacity = newOpacity;
+}
+
+function mapNumber(value, low1, high1, low2, high2) {
+    return clamp(low2 + (high2 - low2) * (value - low1) / (high1 - low1), low2, high2);
+}
+
+function clamp(val, min, max) {
+    return val > max ? max : val < min ? min : val;
 }
