@@ -20,8 +20,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Q5 develops digital solutions for growing businesses.' },
-      { name: 'msapplication-TileColor', content: '#00aba9'},
-      { name: 'theme-color', content: '#ffffff'}
+      { name: 'msapplication-TileColor', content: '#00aba9' },
+      { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -43,7 +43,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    {src: '~/plugins/v-fade-out.js',}
+    { src: '~/plugins/v-fade-out.js', }
   ],
   /*
   ** Auto import components
@@ -82,5 +82,13 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    terser: {
+      // https://github.com/terser/terser#compress-options
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
+    }
   }
 }
