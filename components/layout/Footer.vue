@@ -4,7 +4,7 @@
       <ul>
         <li>© Q5 {{ currentYear }}</li>
         <li v-for="(social, index) in socials" v-bind:key="index">
-          <a :href="social.link">{{ social.name }}</a>
+          <a :href="social.link" target="_blank">{{ social.name }}</a>
         </li>
       </ul>
     </div>
