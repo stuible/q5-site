@@ -7,7 +7,7 @@
       muted
       loop
       preload
-      poster=""
+      :poster="require('~/assets/logo/metaTop.svg?data')"
     >
       <source :src="require('~/assets/videos/logo-top-video.mp4')" />
     </video>
