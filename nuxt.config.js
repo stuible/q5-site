@@ -64,6 +64,9 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
   ],
+  sitemap: {
+    hostname: 'https://beta.q-5.ca',
+  },
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
