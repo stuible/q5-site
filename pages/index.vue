@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <SocialHead :title="title" :description="description" />
+    <social-head :title="title" :description="description" />
     <meta-logo-top v-fade-out />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
