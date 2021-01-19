@@ -3,7 +3,7 @@
     <div class="person-left">
       <img
         :src="require('@/assets/' + $props.icon)"
-        alt=""
+        :alt="`${$props.name}'s Logo`"
         class="person-icon"
       />
     </div>
