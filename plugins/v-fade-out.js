@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-const topOffest = 150;
+const topOffest = 130;
 
 // Register a global custom directive called `v-fade-out`
 Vue.directive('fade-out', {
