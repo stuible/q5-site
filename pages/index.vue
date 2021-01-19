@@ -17,7 +17,7 @@
     <h2 v-fade-out>Us</h2>
     <div id="about">
       <p v-fade-out>
-        Q5 is a Vancouver based web design and development consultancy. We are a
+        Q5 is a Vancouver-based web design and development consultancy. We are a
         group of developers and designers that create useful stuff for the
         internet and beyond.
       </p>
