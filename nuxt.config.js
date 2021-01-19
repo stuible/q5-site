@@ -61,6 +61,8 @@ export default {
     '@nuxt/content',
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
   /*
   ** Content module configuration
