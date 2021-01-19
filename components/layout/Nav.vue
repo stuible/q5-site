@@ -47,10 +47,12 @@ nav {
   /* flex-direction: row; */
 }
 #cta {
-  /* justify-self: flex-end; */
-  padding: 0.85em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 0.85em;
+  padding-top: 0.1em;
   border: black 2px solid;
-  // background-color: white;
 
   &:hover {
     background-color: black;
