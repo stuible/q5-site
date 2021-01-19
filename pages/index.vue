@@ -1,5 +1,6 @@
 <template>
   <main class="container">
+    <SocialHead :title="title" :description="description" />
     <meta-logo-top v-fade-out />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
@@ -68,6 +69,9 @@ export default {
   data() {
     return {
       // tagline: "Q5 develops digital solutions for growing businesses."
+      title: "Q5 - Web Solutions",
+      description:
+        "Q5 is a Vancouver-based, Canadian web development consulatancy that creates digital solutions for growing businesses.",
     };
   },
   computed: {},
