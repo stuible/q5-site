@@ -7,7 +7,7 @@
       muted
       loop
       preload
-      :poster="require('~/assets/logo/metaTop.svg?data')"
+      poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAAXCAQAAACFDSjoAAAAMElEQVR42u3PAQ0AAAgDoL9/aM3hhAY0k2eqrKysrKysrKysrKysrKysrKysrHzWAvNOFwEAXr4iAAAAAElFTkSuQmCC"
     >
       <source :src="require('~/assets/videos/logo-top-video.mp4')" />
     </video>
@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+video {
+  object-fit: inherit;
+}
 </style>
