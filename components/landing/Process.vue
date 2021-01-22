@@ -54,7 +54,7 @@ export default {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0px 1em;
+  gap: 1em 1em;
   font-size: 1em;
   font-weight: bold;
   padding: 0;
@@ -86,10 +86,11 @@ export default {
       // grid-area: description;
       font-size: 1rem;
       font-weight: normal;
+       max-width: 22em;
     }
 
     .icon {
-      width: 3em;
+      width: 5rem;
       // grid-area: logo;
       height: auto;
     }
