@@ -60,7 +60,7 @@
     </ul>
     <spacer />
     <h2 v-fade-out>Process</h2>
-    <process v-fade-out />
+    <process />
   </main>
 </template>
 

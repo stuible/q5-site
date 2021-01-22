@@ -1,9 +1,9 @@
 <template>
   <ol id="process">
     <li v-for="step in steps" :key="step.name" class="step">
-      <component :is="step.name" class="icon" />
-      <h3>{{ step.name }}</h3>
-      <p>{{ step.description }}</p>
+      <component :is="step.name" class="icon" v-fade-out/>
+      <h3 v-fade-out>{{ step.name }}</h3>
+      <p v-fade-out>{{ step.description }}</p>
     </li>
   </ol>
 </template>
