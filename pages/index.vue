@@ -166,6 +166,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   font-size: 1.5em;
+  gap: 1em 1em;
 
   li:not(:last-child) {
     margin-bottom: 2em;

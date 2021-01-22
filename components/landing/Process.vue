@@ -90,7 +90,8 @@ export default {
     }
 
     .icon {
-      width: 5rem;
+      width: 4rem;
+      padding-bottom: 1em;
       // grid-area: logo;
       height: auto;
     }

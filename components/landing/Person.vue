@@ -8,7 +8,7 @@
       />
     </div>
     <div>
-      <div class="name">{{ $props.name }}</div>
+      <h3 class="name">{{ $props.name }}</h3>
       <div class="bio">{{ $props.bio }}</div>
       <a :href="$props.url" target="_blank" class="url">Selected Works</a>
     </div>
@@ -38,13 +38,13 @@ export default {
   }
 
   .person-icon {
-    max-height: 5rem;
+    max-height: 4rem;
     margin: 0 auto;
     width: 100%;
   }
 
   .name {
-    font-weight: bold;
+    margin: 0;
     margin-bottom: 1rem;
   }
 
