@@ -54,6 +54,7 @@ export default {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
+  gap: 0px 1em;
   font-size: 1em;
   font-weight: bold;
   padding: 0;
@@ -67,28 +68,29 @@ export default {
   }
 
   .step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    align-items: start;
-    gap: 0px 0px;
-    grid-template-areas:
-      "logo name"
-      "logo description";
+    // display: grid;
+    // grid-template-columns: auto 1fr;
+    // grid-template-rows: auto auto;
+    // align-items: start;
+    // gap: 0px 0px;
+    // grid-template-areas:
+    //   "logo name"
+    //   "logo description";
 
     h3 {
-      grid-area: name;
+      // grid-area: name;
       margin: 0;
     }
 
     p {
-      grid-area: description;
-      font-size: 0.5em;
+      // grid-area: description;
+      font-size: 1rem;
+      font-weight: normal;
     }
 
     .icon {
       width: 3em;
-      grid-area: logo;
+      // grid-area: logo;
       height: auto;
     }
   }
