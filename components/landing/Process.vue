@@ -1,7 +1,7 @@
 <template>
   <ol id="process">
     <li v-for="step in steps" :key="step.name" class="step">
-      <component :is="step.name" class="icon" v-fade-out/>
+      <component :is="step.name" class="icon" v-fade-out />
       <h3 v-fade-out>{{ step.name }}</h3>
       <p v-fade-out>{{ step.description }}</p>
     </li>
@@ -26,22 +26,22 @@ export default {
         {
           name: "Research",
           description:
-            "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+            "We work with you to diagnose and address obstacles to your success on the web",
         },
         {
           name: "Design",
           description:
-            "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+            "Our design method integrates form & function to deliver a consistent and engaging experience",
         },
         {
           name: "Build",
           description:
-            "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+            "We develop state-of-the-art solutions that are fast, maintainable, and beautiful",
         },
         {
           name: "Iterate",
           description:
-            "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+            "We gain insights at every turn and work to strengthen the project to ensure growth and sustainability",
         },
       ],
     };
@@ -86,7 +86,7 @@ export default {
       // grid-area: description;
       font-size: 1rem;
       font-weight: normal;
-       max-width: 22em;
+      max-width: 22em;
     }
 
     .icon {
