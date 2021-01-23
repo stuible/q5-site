@@ -63,6 +63,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    ['nuxt-canonical', { baseUrl: 'https://q-5.ca' }],
   ],
   sitemap: {
     hostname: 'https://q-5.ca',
