@@ -71,7 +71,8 @@ export default {
   robots: [
     {
       UserAgent: '*',
-      Disallow: () => process.env.NO_ROBOTS ? '/' : ''
+      Disallow: () => process.env.NO_ROBOTS ? '/' : '',
+      Sitemap: () => process.env.BASE_URL ? process.env.BASE_URL  + '/sitemap.xml' : '/sitemap.xml'
     }
   ],
   /*
