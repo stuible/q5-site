@@ -67,6 +67,12 @@ export default {
   sitemap: {
     hostname: 'https://q-5.ca',
   },
+  robots: [
+    {
+      UserAgent: '*',
+      Disallow: () => process.env.NO_ROBOTS ? '/' : ''
+    }
+  ],
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
