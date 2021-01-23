@@ -11,6 +11,9 @@ export default {
   */
   head: {
     title: 'Q5 - Web Solutions',
+    htmlAttrs: {
+      lang: 'en-ca'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
