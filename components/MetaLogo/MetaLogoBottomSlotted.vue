@@ -3,7 +3,7 @@
     <div class="slot-container">
       <slot></slot>
     </div>
-    <BottomLogo />
+    <BottomLogo class="meta-logo-svg"/>
   </div>
 </template>
 

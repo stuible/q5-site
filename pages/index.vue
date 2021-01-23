@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <social-head :title="title" :description="description" />
-    <meta-logo-top v-fade-out />
+    <meta-logo-top :email="email"/>
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
         Q5 develops digital solutions for growing businesses.
@@ -72,7 +72,12 @@ export default {
       title: "Q5 - Web Solutions",
       description:
         "Q5 is a Vancouver-based, Canadian web development consulatancy that creates digital solutions for growing businesses.",
+      email: "",
     };
+  },
+  mounted() {
+    // Add email link with JS after component mounts to avoid people scraping the site
+    this.email = "contact" + "@" + "q-5.ca";
   },
   computed: {},
 };

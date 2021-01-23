@@ -1,11 +1,29 @@
 .meta-logo-section {
     display: flex;
     justify-content: center;
-    svg {
+    svg.meta-logo-svg {
         display: block;
+        overflow: visible;
         width: 100%;
         height: 100%;
         max-width: map-get($breakpoints, phone) - ($container-padding * 2);
+
+        path {
+            fill: white;
+            stroke: black;
+            stroke-width: 10px;
+            outline-offset: -10px;
+
+            @include breakpoint(phone) {
+                fill: black;
+                stroke: none;
+            }
+        }
+    }
+
+    .logo-top-cta {
+        border: solid black 1px;
+        outline: 1px solid black;
     }
 
     video {

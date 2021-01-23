@@ -1,6 +1,6 @@
 <template>
   <div class="meta-logo-section">
-    <MiddleLogo />
+    <MiddleLogo class="meta-logo-svg"/>
   </div>
 </template>
 
