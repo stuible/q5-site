@@ -1,17 +1,17 @@
 <template>
   <div class="logo-top-cta">
     <div class="inner">
-      <logo class="cta-logo" :class="{ show: showLogo }" />
+      <img src="~/assets/logo/logo.svg?data" class="cta-logo" :class="{ show: showLogo }" />
       <a :href="`mailto:${email}`">{{ email }}</a>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from "~/assets/logo/logo.svg?inline";
+// import Logo from "~/assets/logo/logo.svg?inline";
 export default {
   components: {
-    Logo,
+    // Logo,
   },
   props: ["email"],
   data() {
