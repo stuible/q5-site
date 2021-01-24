@@ -71,7 +71,7 @@ export default {
       // tagline: "Q5 develops digital solutions for growing businesses."
       title: "Q5 - Web Solutions",
       description:
-        "Q5 is a Vancouver-based, Canadian web development consulatancy that creates digital solutions for growing businesses.",
+        "Q5 is a Vancouver-based, Canadian web development consultancy that creates digital solutions for growing businesses.",
       email: "",
     };
   },
