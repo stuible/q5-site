@@ -43,6 +43,9 @@ export default {
     { src: '~/plugins/v-fade-out.js', },
     { src: '~/plugins/ga.client.js', mode: 'client' }
   ],
+  env: {
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
