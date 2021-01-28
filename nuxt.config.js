@@ -51,11 +51,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/google-analytics'
+
   ],
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
-  },
   /*
   ** Nuxt.js modules
   */
@@ -66,6 +63,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    '@nuxtjs/google-gtag',
     ['nuxt-canonical', { baseUrl: 'https://q-5.ca' }],
   ],
   sitemap: {
@@ -75,9 +73,12 @@ export default {
     {
       UserAgent: '*',
       Disallow: () => process.env.NO_ROBOTS ? '/' : '',
-      Sitemap: () => process.env.BASE_URL ? process.env.BASE_URL  + '/sitemap.xml' : '/sitemap.xml'
+      Sitemap: () => process.env.BASE_URL ? process.env.BASE_URL + '/sitemap.xml' : '/sitemap.xml'
     }
   ],
+  'google-gtag': {
+    id: GOOGLE_ANALYTICS_ID,
+  },
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
