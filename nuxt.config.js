@@ -77,7 +77,7 @@ export default {
     }
   ],
   'google-gtag': {
-    id: GOOGLE_ANALYTICS_ID,
+    id: process.env.GOOGLE_ANALYTICS_ID,
   },
   /*
   ** Content module configuration
