@@ -28,14 +28,9 @@
       </p>
       <!-- <p v-fade-out> 🧠 🔬 📐 👨‍🎨 👩‍💻 🕸 🏁 🤗</p> -->
     </div>
-    <!-- <spacer />
-    <h2 v-fade-out>Projects</h2>
-    <ul id="projects" >
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-    </ul> -->
+    <spacer />
+    <h2 v-fade-out>Work</h2>
+    <Work :items="work"/>
     <spacer />
     <h2 v-fade-out>Who</h2>
     <ul id="who">
@@ -66,6 +61,12 @@
 
 <script>
 export default {
+  async asyncData({$content}){
+    console.log(await $content('work').where({ featured: true }).fetch())
+    return {
+      work: await $content('work').where({ featured: true }).fetch()
+    }
+  },
   data() {
     return {
       // tagline: "Q5 develops digital solutions for growing businesses."
