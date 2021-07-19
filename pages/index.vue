@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <social-head :title="title" :description="description" />
-    <meta-logo-top :email="email"/>
+    <meta-logo-top :email="email" />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
         Q5 develops digital solutions for growing businesses.
@@ -85,7 +85,11 @@ export default {
 
 <style lang="scss">
 h2 {
-  font-size: 3em;
+  font-size: 2em;
+
+  @include breakpoint(phone) {
+    font-size: 3em;
+  }
 }
 
 #top-nav {
@@ -170,7 +174,6 @@ main {
 #who {
   display: grid;
   grid-template-columns: 1fr;
-  font-size: 1.5em;
   gap: 1em 1em;
 
   li:not(:last-child) {

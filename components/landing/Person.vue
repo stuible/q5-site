@@ -45,16 +45,19 @@ export default {
 
   .name {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.15rem;
+    font-size: 1em;
+
+    @include breakpoint(phone) {
+      font-size: 2em;
+    }
   }
 
   .bio {
     margin-bottom: 1rem;
-    font-size: 0.75em;
   }
 
   .url {
-    font-size: 0.75em;
     padding-bottom: 0.2em;
     border-bottom: solid black 0.175em;
   }
