@@ -56,7 +56,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-
+    '@nuxt/image',
   ],
   /*
   ** Nuxt.js modules

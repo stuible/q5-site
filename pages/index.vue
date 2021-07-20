@@ -62,9 +62,8 @@
 <script>
 export default {
   async asyncData({$content}){
-    console.log(await $content('work').where({ featured: true }).fetch())
     return {
-      work: await $content('work').where({ featured: true }).fetch()
+      work: await $content('work').where({ featured: true }).sortBy('order').fetch()
     }
   },
   data() {

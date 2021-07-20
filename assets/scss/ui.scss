@@ -12,7 +12,11 @@ a {
     color: black;
 }
 
-ul {
+ul, ol {
     list-style: none;
     padding: 0;
+}
+
+img {
+    max-width: 100%;
 }

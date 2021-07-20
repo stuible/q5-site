@@ -1,7 +1,7 @@
 <template>
   <header id="top-nav">
     <nav class="container">
-      <logo id="nav-logo" />
+      <nuxt-link to="/"><logo id="nav-logo" /></nuxt-link>
       <a id="cta" :href="email">Let's Make Something</a>
     </nav>
   </header>
