@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <social-head :title="title" :description="description" />
-    <meta-logo-top :email="email"/>
+    <meta-logo-top :email="email" />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
         Q5 develops digital solutions for growing businesses.
@@ -28,14 +28,9 @@
       </p>
       <!-- <p v-fade-out> 🧠 🔬 📐 👨‍🎨 👩‍💻 🕸 🏁 🤗</p> -->
     </div>
-    <!-- <spacer />
-    <h2 v-fade-out>Projects</h2>
-    <ul id="projects" >
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-    </ul> -->
+    <spacer />
+    <h2 v-fade-out>Work</h2>
+    <Work :items="work"/>
     <spacer />
     <h2 v-fade-out>Who</h2>
     <ul id="who">
@@ -66,12 +61,17 @@
 
 <script>
 export default {
+  async asyncData({$content}){
+    return {
+      work: await $content('work').where({ featured: true }).sortBy('order').fetch()
+    }
+  },
   data() {
     return {
       // tagline: "Q5 develops digital solutions for growing businesses."
       title: "Q5 - Web Solutions",
       description:
-        "Q5 is a Vancouver-based, Canadian web development consulatancy that creates digital solutions for growing businesses.",
+        "Q5 is a Vancouver-based, Canadian web development consultancy that creates digital solutions for growing businesses.",
       email: "",
     };
   },
@@ -85,7 +85,11 @@ export default {
 
 <style lang="scss">
 h2 {
-  font-size: 3em;
+  font-size: 2em;
+
+  @include breakpoint(phone) {
+    font-size: 3em;
+  }
 }
 
 #top-nav {
@@ -170,7 +174,6 @@ main {
 #who {
   display: grid;
   grid-template-columns: 1fr;
-  font-size: 1.5em;
   gap: 1em 1em;
 
   li:not(:last-child) {

@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <Nav />
-    <Nuxt />
-    <Footer />
-  </div>
+  <main class="container">
+      Work
+  </main>
 </template>
 
 <script>
-
 export default {
 
 }
@@ -16,5 +13,3 @@ export default {
 <style>
 
 </style>
-
-

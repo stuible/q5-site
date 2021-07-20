@@ -17,7 +17,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Q5 is a Vancouver-based, Canadian web development consulatancy that creates digital solutions for growing businesses.' },
+      { hid: 'description', name: 'description', content: 'Q5 is a Vancouver-based, Canadian web development consultancy that creates digital solutions for growing businesses.' },
       { name: 'msapplication-TileColor', content: '#00aba9' },
       { name: 'theme-color', content: '#ffffff' }
     ],
@@ -25,8 +25,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: "32x32" },
       { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: "16x16" },
-      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: "16x16" },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: 'black' },
       { rel: "stylesheet", href: "https://use.typekit.net/mbs4zfv.css" }
     ]
   },
@@ -42,19 +42,24 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '~/plugins/v-fade-out.js', }
+    { src: '~/plugins/v-fade-out.js', },
+    { src: '~/plugins/ga.client.js', mode: 'client' }
   ],
+  env: {
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
   */
-  components: true,
+  components: [
+    { path: '~/components', pathPrefix: false }
+  ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-
+    '@nuxt/image',
   ],
   /*
   ** Nuxt.js modules
@@ -66,6 +71,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    ['nuxt-canonical', { baseUrl: 'https://q-5.ca' }],
   ],
   sitemap: {
     hostname: 'https://q-5.ca',
@@ -73,7 +79,8 @@ export default {
   robots: [
     {
       UserAgent: '*',
-      Disallow: () => process.env.NO_ROBOTS ? '/' : ''
+      Disallow: () => process.env.NO_ROBOTS ? '/' : '',
+      Sitemap: () => process.env.BASE_URL ? process.env.BASE_URL + '/sitemap.xml' : '/sitemap.xml'
     }
   ],
   /*

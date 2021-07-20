@@ -1,17 +1,21 @@
 <template>
   <div class="logo-top-cta">
     <div class="inner">
-      <logo class="cta-logo" :class="{ show: showLogo }" />
+      <img
+        src="~/assets/logo/logo-white.svg?data"
+        class="cta-logo"
+        :class="{ show: showLogo }"
+      />
       <a :href="`mailto:${email}`">{{ email }}</a>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from "~/assets/logo/logo.svg?inline";
+// import Logo from "~/assets/logo/logo.svg?inline";
 export default {
   components: {
-    Logo,
+    // Logo,
   },
   props: ["email"],
   data() {
@@ -39,8 +43,7 @@ export default {
   width: 100%;
   padding-top: calc(138 / 726 * 100%);
   position: relative;
-  //   text-align: center;
-  background-color: white;
+  background-color: black;
 
   .inner {
     position: absolute;
@@ -50,10 +53,9 @@ export default {
     height: 100%;
     justify-content: flex-start;
     align-items: center;
-    // flex-grow: 1;
 
     a {
-    //   text-align: center;
+      color: white;
       width: 100%;
       height: 100%;
       display: flex;

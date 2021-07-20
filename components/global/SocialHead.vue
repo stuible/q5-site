@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://beta.q-5.ca/opengraph-card.png'
+      default: 'https://q-5.ca/opengraph-card.png'
     }
   },
 
