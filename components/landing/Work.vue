@@ -37,6 +37,7 @@ export default {
 .info {
   display: grid;
   grid-template-columns: 1fr auto;
+  margin-top: 1em;
 }
 
 .title {
@@ -44,10 +45,22 @@ export default {
 }
 
 .type {
-
 }
 
 .tags {
+}
 
+.tags {
+  display: flex;
+  max-width: 20em;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  li {
+    &:not(:first-of-type) {
+    //   list-style-type: disc;
+      list-style-position: inside;
+      margin-left: 0.75em;
+    }
+  }
 }
 </style>
