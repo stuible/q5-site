@@ -10,11 +10,11 @@
             <h3 class="title">{{ item.title }}</h3>
             <p class="type">{{ item.type }}</p>
           </div>
-          <ul class="tags">
+          <!-- <ul class="tags">
             <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
               {{ tag }}
             </li>
-          </ul>
+          </ul> -->
         </div>
       </nuxt-link>
     </li>
@@ -29,6 +29,14 @@ export default {
 
 <style lang="scss" scoped>
 .works {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+
+  @include breakpoint(phablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   > li:not(:last-of-type) {
     margin-bottom: 2rem;
   }
@@ -57,7 +65,7 @@ export default {
   align-content: flex-start;
   li {
     &:not(:first-of-type) {
-    //   list-style-type: disc;
+      //   list-style-type: disc;
       list-style-position: inside;
       margin-left: 0.75em;
     }
