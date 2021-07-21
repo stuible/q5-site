@@ -10,11 +10,11 @@
             <h3 class="title">{{ item.title }}</h3>
             <p class="type">{{ item.type }}</p>
           </div>
-          <!-- <ul class="tags">
+          <ul class="tags">
             <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
               {{ tag }}
             </li>
-          </ul> -->
+          </ul>
         </div>
       </nuxt-link>
     </li>
@@ -44,7 +44,7 @@ export default {
 
 .info {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 3fr;
   margin-top: 1em;
 }
 
@@ -63,9 +63,11 @@ export default {
   max-width: 20em;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: flex-end;
+  text-align: right;
   li {
     &:not(:first-of-type) {
-      //   list-style-type: disc;
+        list-style-type: disc;
       list-style-position: inside;
       margin-left: 0.75em;
     }

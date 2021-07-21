@@ -1,5 +1,5 @@
 ---
-title: Saggi Financial Solutions Inc.
+title: Saggi Financial Solutions
 type: Insurance Services
 hero: hero.png
 tags:
