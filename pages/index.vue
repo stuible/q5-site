@@ -64,7 +64,7 @@ export default {
   async asyncData({ $content }) {
     return {
       work: await $content("work")
-        .where({ featured: true })
+        .where({ 'featured.show': true })
         .sortBy("order")
         .fetch(),
     };

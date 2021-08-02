@@ -3,7 +3,7 @@
     <li v-for="(item, key) in items" :key="key">
       <nuxt-link :to="`work/${item.slug}`">
         <div v-fade-out>
-          <nuxt-picture :src="`/work/${item.slug}/${item.hero}`" />
+          <nuxt-picture :src="`/work/${item.slug}/${item.featured.image}`" />
         </div>
         <div class="info" v-fade-out>
           <div>
@@ -26,6 +26,22 @@ export default {
   props: ["items"],
 };
 </script>
+
+<style lang="scss">
+/* global styles */
+.works {
+  a {
+    img {
+      transition: transform 100ms linear;
+    }
+    &:hover {
+      img {
+        transform: scale(1.025);
+      }
+    }
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 .works {
@@ -50,9 +66,12 @@ export default {
 
 .title {
   margin: 0;
+  margin-right: 0.5em;
 }
 
 .type {
+  text-transform: uppercase;
+  font-size: 0.85em;
 }
 
 .tags {
@@ -65,9 +84,15 @@ export default {
   align-content: flex-start;
   justify-content: flex-end;
   text-align: right;
+  font-size: 0.75em;
+
+  @include breakpoint(phone) {
+    font-size: 0.9em;
+  }
+
   li {
     &:not(:first-of-type) {
-        list-style-type: disc;
+      list-style-type: disc;
       list-style-position: inside;
       margin-left: 0.75em;
     }
