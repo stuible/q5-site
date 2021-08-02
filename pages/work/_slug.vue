@@ -1,7 +1,7 @@
 <template>
   <main class="container">
-      <h1>{{work.title}}</h1>
-      <nuxt-content :document="work" />
+    <h1>{{ work.title }}</h1>
+    <nuxt-content :document="work" />
   </main>
 </template>
 
@@ -15,5 +15,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+h1 {
+  font-size: 2.5em;
+
+  @include breakpoint(tablet) {
+    font-size: 3em;
+  }
+}
 </style>

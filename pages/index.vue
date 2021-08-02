@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <social-head :title="title" :description="description" />
-    <meta-logo-top :email="email" />
+    <meta-logo-top :email="email" class="landing-logo-top" />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
         Q5 develops digital solutions for growing businesses.
@@ -30,7 +30,7 @@
     </div>
     <spacer />
     <h2 v-fade-out>Work</h2>
-    <Work :items="work"/>
+    <Work :items="work" />
     <spacer />
     <h2 v-fade-out>Who</h2>
     <ul id="who">
@@ -61,10 +61,13 @@
 
 <script>
 export default {
-  async asyncData({$content}){
+  async asyncData({ $content }) {
     return {
-      work: await $content('work').where({ featured: true }).sortBy('order').fetch()
-    }
+      work: await $content("work")
+        .where({ featured: true })
+        .sortBy("order")
+        .fetch(),
+    };
   },
   data() {
     return {
@@ -92,10 +95,15 @@ h2 {
   }
 }
 
-#top-nav {
-  display: none;
-  @include breakpoint(phone) {
-    display: block;
+.landing-logo-top {
+  padding-top: 0px;
+
+  @include breakpoint(thone) {
+    padding-top: 150px;
+  }
+
+  &.solid {
+    padding-top: 0px;
   }
 }
 

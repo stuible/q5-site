@@ -29,6 +29,14 @@ export default {
 
 <style lang="scss" scoped>
 .works {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+
+  @include breakpoint(phablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   > li:not(:last-of-type) {
     margin-bottom: 2rem;
   }
@@ -36,7 +44,7 @@ export default {
 
 .info {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 3fr;
   margin-top: 1em;
 }
 
@@ -55,9 +63,11 @@ export default {
   max-width: 20em;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: flex-end;
+  text-align: right;
   li {
     &:not(:first-of-type) {
-    //   list-style-type: disc;
+        list-style-type: disc;
       list-style-position: inside;
       margin-left: 0.75em;
     }

@@ -1,7 +1,7 @@
 <template>
-  <header id="top-nav">
+  <header id="top-nav" :class="{ solid: type === 'solid' }">
     <nav class="container">
-      <nuxt-link to="/"><logo id="nav-logo" /></nuxt-link>
+      <nuxt-link to="/" id="nav-logo-link"><logo id="nav-logo" /></nuxt-link>
       <a id="cta" :href="email">Let's Make Something</a>
     </nav>
   </header>
@@ -11,32 +11,44 @@
 import Logo from "~/assets/logo/logo.svg?inline";
 export default {
   components: {
-    Logo
+    Logo,
   },
+  props: ["type"],
   data() {
     return {
-      email: ''
+      email: "",
     };
   },
-  mounted(){
+  mounted() {
     // Add email link with JS after component mounts to avoid people scraping the site
-    this.email = 'mailto:contact' + '@q-5.ca'
-  }
+    this.email = "mailto:contact" + "@q-5.ca";
+  },
 };
 </script>
 
 <style lang="scss">
+#top-nav {
+  display: none;
+
+  &.solid {
+    display: block;
+  }
+
+  @include breakpoint(phone) {
+    display: block;
+  }
+}
+
 header {
   padding: 50px 0 50px 0;
+  position: relative;
+  z-index: 2;
+
+  &.solid {
+    background-color: white;
+  }
 
   @include breakpoint(thone) {
-    padding: 50px 0 200px 0;
-    // background: linear-gradient(
-    //   0deg,
-    //   rgba(255, 255, 255, 0) 0%,
-    //   rgba(255, 255, 255, 0.80) 70%,
-    //   rgba(255, 255, 255, 0.95) 100%
-    // );
     position: sticky;
     top: 0;
   }
@@ -58,8 +70,9 @@ nav {
     background-color: black;
     color: white;
   }
-  /* color: white; */
 }
+// #nav-logo-link {
+// }
 #nav-logo {
   width: 25px;
 }
