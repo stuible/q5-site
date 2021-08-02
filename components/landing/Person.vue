@@ -60,6 +60,11 @@ export default {
   .url {
     padding-bottom: 0.2em;
     border-bottom: solid black 0.175em;
+    transition: padding 75ms linear;
+
+    &:hover {
+      padding-bottom: 0.4em;
+    }
   }
 }
 </style>

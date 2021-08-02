@@ -84,7 +84,9 @@ export default {
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
   */
-  content: {},
+  content: {
+    nestedProperties: ['featured.show']
+  },
   styleResources: {
     scss: [
       './assets/scss/variables.scss',
