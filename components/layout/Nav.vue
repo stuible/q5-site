@@ -2,7 +2,7 @@
   <header id="top-nav" :class="{ solid: type === 'solid' }">
     <nav class="container">
       <nuxt-link to="/" id="nav-logo-link"><logo id="nav-logo" /></nuxt-link>
-      <a id="cta" :href="email">Let's Make Something</a>
+      <button-link id="cta">Let's Make Something</button-link>
     </nav>
   </header>
 </template>
@@ -26,20 +26,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #top-nav {
   display: none;
 
   &.solid {
     display: block;
+
+    #cta {
+      display: none;
+
+      @include breakpoint(phone) {
+        display: flex;
+      }
+    }
   }
 
   @include breakpoint(phone) {
     display: block;
   }
-}
 
-header {
   padding: 50px 0 50px 0;
   position: relative;
   z-index: 2;
@@ -53,26 +59,12 @@ header {
     top: 0;
   }
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   /* flex-direction: row; */
 }
-#cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0em 0.85em;
-  padding-top: 0.1em;
-  border: black 2px solid;
-
-  &:hover {
-    background-color: black;
-    color: white;
-  }
-}
-// #nav-logo-link {
-// }
 #nav-logo {
   width: 25px;
 }
