@@ -1,12 +1,11 @@
 .container {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 $container-padding;
+    padding: 0 $container-padding - 25;
 
-    // @include breakpoint(phone) {
-    //     max-width: 100%;
-    //     padding: 0 25px;
-    // }
+    @include breakpoint(phone) {
+        padding: 0 $container-padding;
+    }
 
     // @include breakpoint(phablet) {
     //     max-width: map-get($breakpoints, phablet) + 100;
