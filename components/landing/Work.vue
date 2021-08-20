@@ -60,8 +60,12 @@ export default {
 
 .info {
   display: grid;
-  grid-template-columns: 3fr 3fr;
+  grid-template-columns: 1fr;
   margin-top: 1em;
+
+  @include breakpoint(phone) {
+    grid-template-columns: 3fr 3fr;
+  }
 }
 
 .title {
@@ -79,15 +83,17 @@ export default {
 
 .tags {
   display: flex;
-  max-width: 20em;
+
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: flex-end;
-  text-align: right;
+
   font-size: 0.75em;
 
   @include breakpoint(phone) {
     font-size: 0.9em;
+    max-width: 20em;
+    text-align: right;
+    justify-content: flex-end;
   }
 
   li {
