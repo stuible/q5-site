@@ -23,6 +23,8 @@ img {
 }
 
 .nuxt-content {
+    max-width: 40em;
+
     h2 {
         font-size: 1.5em;
 
@@ -31,7 +33,7 @@ img {
         }
     }
 
-    p {
-        max-width: 40em;
-    }
+    // p {
+        
+    // }
 }
