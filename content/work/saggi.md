@@ -4,6 +4,7 @@ type: Insurance Services
 when: Spring 2021
 link: https://sonikasaggi.com/
 hero: hero.png
+seo: Learn about how Q5 refreshed a Financial Advisor's brand and website
 tags:
     - Branding
     - Web Design

@@ -125,7 +125,11 @@ h2 {
 }
 
 main {
-  margin-top: 50px !important;
+  margin-top: $container-mobile-padding !important;
+
+  @include breakpoint(phone) {
+    margin-top: $container-padding !important;
+  }
 
   @include breakpoint(thone) {
     margin-top: 0px !important;

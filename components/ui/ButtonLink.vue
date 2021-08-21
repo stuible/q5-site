@@ -18,10 +18,15 @@ a {
   border: black 2px solid;
   min-height: 3em;
   cursor: pointer;
+  font-size: 0.8em;
 
   &:hover {
     background-color: black;
     color: white;
+  }
+
+  @include breakpoint(phablet) {
+    font-size: 1em;
   }
 }
 </style>
