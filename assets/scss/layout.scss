@@ -1,7 +1,7 @@
 .container {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 $container-padding - 25;
+    padding: 0 $container-mobile-padding;
 
     @include breakpoint(phone) {
         padding: 0 $container-padding;
