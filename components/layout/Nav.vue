@@ -2,7 +2,7 @@
   <header id="top-nav" :class="{ solid: type === 'solid' }">
     <nav class="container">
       <nuxt-link to="/" id="nav-logo-link"><logo id="nav-logo" /></nuxt-link>
-      <button-link id="cta" :href="`mailto:${email}`">Let's Make Something</button-link>
+      <button-link id="cta" :href="`${email}`">Let's Make Something</button-link>
     </nav>
   </header>
 </template>
