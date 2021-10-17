@@ -7,7 +7,7 @@ when: Spring 2021
 tags:
     - Web Development
 featured:
-    show: false
+    show: true
     image: hero.jpg
 order: 2
 ---
