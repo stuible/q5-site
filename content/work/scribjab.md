@@ -5,6 +5,7 @@ hero: hero.jpg
 link: https://www.scribjab.com/
 when: Spring 2021
 seo: Learn about how Q5 replaced an old Adobe Flash audio recorder with a one that uses native and modern web standards
+summary: Learn about how Q5 replaced an old Adobe Flash audio recorder with a one that uses native and modern web standards
 tags:
     - Web Development
 featured:

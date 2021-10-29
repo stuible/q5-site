@@ -2,20 +2,21 @@
   <ol class="works">
     <li v-for="(item, key) in items" :key="key">
       <nuxt-link :to="`work/${item.slug}`">
-        <div v-fade-out>
-          <nuxt-picture :src="`/work/${item.slug}/${item.featured.image}`" />
-        </div>
         <div class="info" v-fade-out>
-          <div>
-            <h3 class="title">{{ item.title }}</h3>
-            <p class="type">{{ item.type }}</p>
-          </div>
-          <ul class="tags">
+          <h3 class="title">{{ item.title }}</h3>
+          <p class="type">{{ item.type }}</p>
+
+          <!-- <ul class="tags">
             <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
               {{ tag }}
             </li>
-          </ul>
+          </ul> -->
         </div>
+        <div v-fade-out>
+          <nuxt-picture :src="`/work/${item.slug}/${item.featured.image}`" />
+        </div>
+
+        <p class="summary" v-fade-out>{{ item.summary }}</p>
       </nuxt-link>
     </li>
   </ol>
@@ -59,13 +60,15 @@ export default {
 }
 
 .info {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 1em;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  // grid-template-columns: 1fr;
+  margin-bottom: 1em;
 
-  @include breakpoint(phone) {
-    grid-template-columns: 3fr 3fr;
-  }
+  // @include breakpoint(phone) {
+  //   grid-template-columns: 3fr 3fr;
+  // }
 }
 
 .title {
@@ -74,34 +77,54 @@ export default {
 }
 
 .type {
+  margin: 0;
   text-transform: uppercase;
   font-size: 0.85em;
-}
-
-.tags {
-}
-
-.tags {
-  display: flex;
-
-  flex-wrap: wrap;
-  align-content: flex-start;
-
-  font-size: 0.75em;
+  display: none;
 
   @include breakpoint(phone) {
-    font-size: 0.9em;
-    max-width: 20em;
-    text-align: right;
-    justify-content: flex-end;
+    display: block;
   }
 
-  li {
-    &:not(:first-of-type) {
-      list-style-type: disc;
-      list-style-position: inside;
-      margin-left: 0.75em;
-    }
+  @include breakpoint(phablet) {
+    display: none;
+  }
+
+  @include breakpoint(tablet) {
+    display: block;
   }
 }
+
+.summary {
+  // font-size: 0.75em;
+  // font-weight: bold;
+  // color: $colourDark;
+}
+
+// .tags {
+// }
+
+// .tags {
+//   display: flex;
+
+//   flex-wrap: wrap;
+//   align-content: flex-start;
+
+//   font-size: 0.75em;
+
+//   @include breakpoint(phone) {
+//     font-size: 0.9em;
+//     max-width: 20em;
+//     text-align: right;
+//     justify-content: flex-end;
+//   }
+
+//   li {
+//     &:not(:first-of-type) {
+//       list-style-type: disc;
+//       list-style-position: inside;
+//       margin-left: 0.75em;
+//     }
+//   }
+// }
 </style>

@@ -14,7 +14,11 @@
           <p class="type">{{ work.type }}</p>
         </div>
         <div class="project-link">
-          <button-link id="check-it-out" :href="work.link" target="_blank" v-if="work.link"
+          <button-link
+            id="check-it-out"
+            :href="work.link"
+            target="_blank"
+            v-if="work.link"
             ><globe-icon />Check It Out<globe-icon
           /></button-link>
         </div>
@@ -40,7 +44,6 @@ export default {
 
 <style lang="scss">
 .nuxt-content-styles {
-  
   h2 {
     margin-top: 2em;
   }
@@ -52,6 +55,29 @@ export default {
   a {
     border-bottom: 1px solid black;
     padding-bottom: 0.5em;
+  }
+
+  blockquote {
+    // background: #f9f9f9;
+    // border-left: 10px solid #ccc;
+    margin: 0;
+    padding: 0.5em 10px;
+    // quotes: "\201C""\201D""\2018""\2019";
+
+    &:before {
+      color: #ccc;
+      content: open-quote;
+      // font-size: 5em;
+      // position: absolute;
+      // line-height: 0.1em;
+      margin-right: 0.25em;
+      // vertical-align: -0.3em;
+      // height: 1em;
+      // display: inline-block;
+    }
+    p {
+      display: inline;
+    }
   }
 }
 </style>
