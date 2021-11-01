@@ -57,6 +57,7 @@ export default {
   */
   buildModules: [
     '@nuxt/image',
+    '@nuxtjs/svg',
   ],
   /*
   ** Nuxt.js modules
@@ -64,7 +65,6 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/svg',
     '@nuxtjs/style-resources',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
