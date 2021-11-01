@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <social-head :title="title" :description="description" />
-    <meta-logo-top :email="email" />
+    <meta-logo-top :email="email" class="landing-logo-top" />
     <meta-logo-spacer>
       <h1 id="tagline" v-fade-out>
         Q5 develops digital solutions for growing businesses.
@@ -28,14 +28,9 @@
       </p>
       <!-- <p v-fade-out> 🧠 🔬 📐 👨‍🎨 👩‍💻 🕸 🏁 🤗</p> -->
     </div>
-    <!-- <spacer />
-    <h2 v-fade-out>Projects</h2>
-    <ul id="projects" >
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-      <li v-fade-out></li>
-    </ul> -->
+    <spacer />
+    <h2 v-fade-out>Work</h2>
+    <Work :items="work" />
     <spacer />
     <h2 v-fade-out>Who</h2>
     <ul id="who">
@@ -66,6 +61,14 @@
 
 <script>
 export default {
+  async asyncData({ $content }) {
+    return {
+      work: await $content("work")
+        .where({ 'featured.show': true })
+        .sortBy("order")
+        .fetch(),
+    };
+  },
   data() {
     return {
       // tagline: "Q5 develops digital solutions for growing businesses."
@@ -92,10 +95,15 @@ h2 {
   }
 }
 
-#top-nav {
-  display: none;
-  @include breakpoint(phone) {
-    display: block;
+.landing-logo-top {
+  padding-top: 0px;
+
+  @include breakpoint(thone) {
+    padding-top: 150px;
+  }
+
+  &.solid {
+    padding-top: 0px;
   }
 }
 
@@ -117,7 +125,11 @@ h2 {
 }
 
 main {
-  margin-top: 50px !important;
+  margin-top: $container-mobile-padding !important;
+
+  @include breakpoint(phone) {
+    margin-top: $container-padding !important;
+  }
 
   @include breakpoint(thone) {
     margin-top: 0px !important;
@@ -149,27 +161,27 @@ main {
   }
 }
 
-#projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em 2em;
+// #projects {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 2em 2em;
 
-  @include breakpoint(phone) {
-    grid-template-columns: 1fr 1fr;
-  }
+//   @include breakpoint(phone) {
+//     grid-template-columns: 1fr 1fr;
+//   }
 
-  @include breakpoint(phablet) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @include breakpoint(tablet) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+//   @include breakpoint(phablet) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+//   @include breakpoint(tablet) {
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//   }
 
-  li {
-    height: 50px;
-    background-color: black;
-  }
-}
+//   li {
+//     height: 50px;
+//     background-color: black;
+//   }
+// }
 
 #who {
   display: grid;
@@ -180,7 +192,7 @@ main {
     margin-bottom: 2em;
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(phablet) {
     grid-template-columns: 1fr 1fr;
 
     li:not(:last-child) {

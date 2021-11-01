@@ -44,6 +44,7 @@ export default {
   padding-top: calc(138 / 726 * 100%);
   position: relative;
   background-color: black;
+  max-width: map-get($breakpoints, phone) - ($container-mobile-padding * 2);
 
   .inner {
     position: absolute;
