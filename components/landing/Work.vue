@@ -91,6 +91,7 @@ export default {
   font-size: 1em;
   margin: 0;
   margin-top: 0.5em;
+  margin-right: 6%;
   // font-weight: bold;
   // color: $colourDark;
 
@@ -110,7 +111,7 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   // align-content: flex-start;
-  font-size: 0.75em;
+  font-size: 0.57em;
   padding: 0.5em 0;
   text-transform: uppercase;
   font-weight: bold;

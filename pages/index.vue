@@ -192,7 +192,7 @@ main {
     margin-bottom: 2em;
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(phablet) {
     grid-template-columns: 1fr 1fr;
 
     li:not(:last-child) {
