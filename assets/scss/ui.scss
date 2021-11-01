@@ -12,7 +12,28 @@ a {
     color: black;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
     padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.nuxt-content {
+    max-width: 40em;
+
+    h2 {
+        font-size: 1.5em;
+
+        @include breakpoint(tablet) {
+            font-size: 2em;
+        }
+    }
+
+    // p {
+        
+    // }
 }

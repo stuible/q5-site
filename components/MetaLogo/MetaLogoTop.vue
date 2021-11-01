@@ -29,11 +29,12 @@ export default {
 
 <style scoped lang="scss">
 .meta-logo-section {
-  top: 50px;
+  top: $container-mobile-padding;
   position: sticky;
   z-index: 1;
   @include breakpoint(phone) {
     position: static;
+    top: $container-padding;
   }
 }
 video {

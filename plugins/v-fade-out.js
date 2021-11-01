@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-const topOffest = 130;
+const topOffest = 110;
 
 // Register a global custom directive called `v-fade-out`
 Vue.directive('fade-out', {
@@ -20,13 +20,10 @@ Vue.directive('fade-out', {
 })
 
 function calculateOpacity(el) {
-    // console.log('opacity calc triggered');
 
     const height = window.innerHeight;
 
-    const fadeRate = mapNumber(height, 350, 700, 10, 100);
-    // console.log(fadeRate)
-
+    const fadeRate = mapNumber(height, 350, 400, 10, 100);
 
     let distanceFromTop = el.getBoundingClientRect().top - topOffest;
     let newOpacity = distanceFromTop / fadeRate;

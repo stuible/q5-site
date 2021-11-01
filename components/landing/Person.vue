@@ -29,6 +29,11 @@ export default {
   margin-bottom: 0.25em;
 
   @include breakpoint(phablet) {
+    grid-template-columns: 4rem auto;
+    olumn-gap: 2em;
+  }
+
+  @include breakpoint(tablet) {
     grid-template-columns: 5rem auto;
     column-gap: 2em;
   }
@@ -38,9 +43,13 @@ export default {
   }
 
   .person-icon {
-    max-height: 4rem;
+    max-height: 3rem;
     margin: 0 auto;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      max-height: 4rem;
+    }
   }
 
   .name {
@@ -49,6 +58,10 @@ export default {
     font-size: 1em;
 
     @include breakpoint(phone) {
+      font-size: 1.8em;
+    }
+
+    @include breakpoint(tablet) {
       font-size: 2em;
     }
   }
@@ -60,6 +73,11 @@ export default {
   .url {
     padding-bottom: 0.2em;
     border-bottom: solid black 0.175em;
+    transition: padding 75ms linear;
+
+    &:hover {
+      padding-bottom: 0.4em;
+    }
   }
 }
 </style>
