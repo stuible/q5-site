@@ -11,7 +11,7 @@ tags:
     - Design
     - E-Commerce
 featured:
-    show: true
+    show: false
     image: hero.jpg
 order: 3
 ---

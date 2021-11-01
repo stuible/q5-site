@@ -58,25 +58,25 @@ export default {
   }
 
   blockquote {
-    // background: #f9f9f9;
-    // border-left: 10px solid #ccc;
-    margin: 0;
-    padding: 0.5em 10px;
-    // quotes: "\201C""\201D""\2018""\2019";
+    position: relative;
+
+    margin: 1em 0;
+    @include breakpoint(phone) {
+      margin: 1em 2.5em;
+    }
 
     &:before {
-      color: #ccc;
       content: open-quote;
-      // font-size: 5em;
-      // position: absolute;
-      // line-height: 0.1em;
-      margin-right: 0.25em;
-      // vertical-align: -0.3em;
-      // height: 1em;
-      // display: inline-block;
-    }
-    p {
-      display: inline;
+      font-size: 5em;
+      position: static;
+      left: -0.53em;
+      top: -0.05em;
+      max-height: 0.5em;
+      display: block;
+
+      @include breakpoint(phone) {
+        position: absolute;
+      }
     }
   }
 }

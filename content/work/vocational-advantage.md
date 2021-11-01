@@ -11,7 +11,7 @@ tags:
     - Graphic Design
     - Web Design
 featured:
-    show: true
+    show: false
     image: hero.jpg
 order: 3
 ---
