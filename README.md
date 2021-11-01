@@ -1,14 +1,12 @@
 # 🆀5
 The website for Q5 written in Nuxt.
 
----
 ## Links
 
 **PRODUCTION:** https://q-5.ca/
 
 **BETA:** https://beta.q-5.ca/
 
----
 
 ## Build Setup
 
