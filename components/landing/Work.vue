@@ -2,20 +2,18 @@
   <ol class="works">
     <li v-for="(item, key) in items" :key="key">
       <nuxt-link :to="`work/${item.slug}`">
+        <h3 class="title" v-fade-out>{{ item.title }}</h3>
         <div v-fade-out>
           <nuxt-picture :src="`/work/${item.slug}/${item.featured.image}`" />
         </div>
-        <div class="info" v-fade-out>
-          <div>
-            <h3 class="title">{{ item.title }}</h3>
-            <p class="type">{{ item.type }}</p>
-          </div>
-          <ul class="tags">
-            <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
-              {{ tag }}
-            </li>
-          </ul>
-        </div>
+
+        <ul class="tags" v-fade-out>
+          <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
+            {{ tag }}
+          </li>
+        </ul>
+
+        <p class="summary" v-fade-out>{{ item.summary }}</p>
       </nuxt-link>
     </li>
   </ol>
@@ -58,42 +56,70 @@ export default {
   }
 }
 
-.info {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 1em;
-
-  @include breakpoint(phone) {
-    grid-template-columns: 3fr 3fr;
-  }
-}
-
 .title {
   margin: 0;
   margin-right: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+  }
 }
 
-.type {
-  text-transform: uppercase;
-  font-size: 0.85em;
+// .type {
+//   margin: 0;
+//   text-transform: uppercase;
+//   font-size: 0.85em;
+//   display: none;
+
+//   @include breakpoint(phone) {
+//     display: block;
+//   }
+
+//   @include breakpoint(phablet) {
+//     display: none;
+//   }
+
+//   @include breakpoint(tablet) {
+//     display: block;
+//   }
+// }
+
+.summary {
+  // flex-basis: 75%;
+  font-size: 1em;
+  margin: 0;
+  margin-top: 0.5em;
+  // font-weight: bold;
+  // color: $colourDark;
+
+  @include breakpoint(thone) {
+    font-size: 1.25em;
+  }
+  @include breakpoint(tablet) {
+    font-size: 1.4em;
+  }
 }
 
-.tags {
-}
+// .tags {
+// }
 
 .tags {
   display: flex;
-
   flex-wrap: wrap;
-  align-content: flex-start;
-
+  align-items: center;
+  // align-content: flex-start;
   font-size: 0.75em;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  font-weight: bold;
 
   @include breakpoint(phone) {
-    font-size: 0.9em;
-    max-width: 20em;
-    text-align: right;
-    justify-content: flex-end;
+    font-size: 0.7em;
+    // max-width: 20em;
+    // text-align: right;
+    // justify-content: flex-end;
   }
 
   li {
