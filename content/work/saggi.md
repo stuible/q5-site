@@ -26,7 +26,7 @@ Sonika approached us with the desire to revitalize her digital presence and attr
 *Sonika's Previous Website*
 
 ### 1. Site Audit
-All of our projects begin with a discovery meeting in which we review the current site and the major pain points for us to address. Having aligned on the project goals, we proposed a **simpler website** with a fresh **new brand** to go with it. Other important changes we prioritized were faster load times, easy-to-use interactions, and a seamless mobile experience.
+All of our projects begin with a discovery meeting in which we review the current site and the major pain points for us to address. Outdated design, confusing information hierarchy, and broken pages were quickly identified. Having aligned on the project goals, we proposed a **simpler website** with a fresh **new brand** to go with it. Other important changes we prioritized were faster load times, easy-to-use interactions, and a seamless mobile experience.
 
 ### 2. Brand Design
 Given our target audience of largely younger families, we agreed that the brand needed to communicate security, growth, and warmth while maintaining a modern and minimal look. The logotype pairs a simple sans serif typeface with a bright green leaf to provide contrast and balance. A subtle gradient throughout all visual elements ensures consistency and provides a sense of motion to graphic elements, even in print.
