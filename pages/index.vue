@@ -161,27 +161,27 @@ main {
   }
 }
 
-#projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em 2em;
+// #projects {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 2em 2em;
 
-  @include breakpoint(phone) {
-    grid-template-columns: 1fr 1fr;
-  }
+//   @include breakpoint(phone) {
+//     grid-template-columns: 1fr 1fr;
+//   }
 
-  @include breakpoint(phablet) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @include breakpoint(tablet) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+//   @include breakpoint(phablet) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+//   @include breakpoint(tablet) {
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//   }
 
-  li {
-    height: 50px;
-    background-color: black;
-  }
-}
+//   li {
+//     height: 50px;
+//     background-color: black;
+//   }
+// }
 
 #who {
   display: grid;

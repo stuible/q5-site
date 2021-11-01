@@ -2,19 +2,16 @@
   <ol class="works">
     <li v-for="(item, key) in items" :key="key">
       <nuxt-link :to="`work/${item.slug}`">
-        <div class="info" v-fade-out>
-          <h3 class="title">{{ item.title }}</h3>
-          <p class="type">{{ item.type }}</p>
-
-          <!-- <ul class="tags">
-            <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
-              {{ tag }}
-            </li>
-          </ul> -->
-        </div>
+        <h3 class="title" v-fade-out>{{ item.title }}</h3>
         <div v-fade-out>
           <nuxt-picture :src="`/work/${item.slug}/${item.featured.image}`" />
         </div>
+
+        <ul class="tags" v-fade-out>
+          <li v-for="(tag, tagKey) in item.tags" :key="tagKey">
+            {{ tag }}
+          </li>
+        </ul>
 
         <p class="summary" v-fade-out>{{ item.summary }}</p>
       </nuxt-link>
@@ -59,72 +56,78 @@ export default {
   }
 }
 
-.info {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  // grid-template-columns: 1fr;
-  margin-bottom: 1em;
-
-  // @include breakpoint(phone) {
-  //   grid-template-columns: 3fr 3fr;
-  // }
-}
-
 .title {
   margin: 0;
   margin-right: 0.5em;
-}
-
-.type {
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 0.85em;
-  display: none;
-
-  @include breakpoint(phone) {
-    display: block;
-  }
-
-  @include breakpoint(phablet) {
-    display: none;
-  }
+  margin-bottom: 1em;
+  font-size: 1.4rem;
 
   @include breakpoint(tablet) {
-    display: block;
+    font-size: 1.5rem;
   }
 }
 
+// .type {
+//   margin: 0;
+//   text-transform: uppercase;
+//   font-size: 0.85em;
+//   display: none;
+
+//   @include breakpoint(phone) {
+//     display: block;
+//   }
+
+//   @include breakpoint(phablet) {
+//     display: none;
+//   }
+
+//   @include breakpoint(tablet) {
+//     display: block;
+//   }
+// }
+
 .summary {
-  // font-size: 0.75em;
+  // flex-basis: 75%;
+  font-size: 1em;
+  margin: 0;
+  margin-top: 0.5em;
   // font-weight: bold;
   // color: $colourDark;
+
+  @include breakpoint(thone) {
+    font-size: 1.25em;
+  }
+  @include breakpoint(tablet) {
+    font-size: 1.4em;
+  }
 }
 
 // .tags {
 // }
 
-// .tags {
-//   display: flex;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // align-content: flex-start;
+  font-size: 0.75em;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  font-weight: bold;
 
-//   flex-wrap: wrap;
-//   align-content: flex-start;
+  @include breakpoint(phone) {
+    font-size: 0.7em;
+    // max-width: 20em;
+    // text-align: right;
+    // justify-content: flex-end;
+  }
 
-//   font-size: 0.75em;
-
-//   @include breakpoint(phone) {
-//     font-size: 0.9em;
-//     max-width: 20em;
-//     text-align: right;
-//     justify-content: flex-end;
-//   }
-
-//   li {
-//     &:not(:first-of-type) {
-//       list-style-type: disc;
-//       list-style-position: inside;
-//       margin-left: 0.75em;
-//     }
-//   }
-// }
+  li {
+    &:not(:first-of-type) {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin-left: 0.75em;
+    }
+  }
+}
 </style>
