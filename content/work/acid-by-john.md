@@ -11,12 +11,12 @@ tags:
     - Design
     - E-Commerce
 featured:
-    show: false
+    show: true
     image: hero.jpg
 order: 3
 ---
 ## Background
-John 
+John is a 
 
 ## Objectives
 The web version of ScribJab used Adobe Flashplayer to implement the audio recording functionality.  With Flash support ending in December of 2020, this feature was no longer available for ScribJab's web users.  Q5 was asked to find a supported alternative to the flash audio recorder.

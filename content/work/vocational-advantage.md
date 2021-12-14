@@ -4,14 +4,14 @@ type: Career Counselling
 when: Summer 2021
 link: https://www.vocationaladvantage.ca/
 hero: hero.jpg
-seo: Learn about how Q5 refreshed a Financial Advisor's brand and website
+seo: Learn about how Q5 brought authenticity and authority to a career counseller's brand
 summary: Learn about how Q5 brought authenticity and authority to a career counseller's brand
 tags:
     - Branding
     - Graphic Design
     - Web Design
 featured:
-    show: false
+    show: true
     image: hero.jpg
 order: 3
 ---
