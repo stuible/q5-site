@@ -10,7 +10,7 @@ tags:
     - Web Development
     - SEO
 featured:
-    show: false
+    show: true
     image: hero.jpg
 order: 3
 ---
