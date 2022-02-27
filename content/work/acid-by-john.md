@@ -16,13 +16,16 @@ featured:
 order: 3
 ---
 ## Background
-John is a 
+John is a visual artist, fashion designer, and founder of the streetwear brand ACiD. He came to us to create a new e-commerce experience for his seeking to eliminate user experience pain-points on both the front- and back-ends of ACiD’s.
 
 ## Objectives
-The web version of ScribJab used Adobe Flashplayer to implement the audio recording functionality.  With Flash support ending in December of 2020, this feature was no longer available for ScribJab's web users.  Q5 was asked to find a supported alternative to the flash audio recorder.
+ACiD is a brand that speaks for itself. The primary objective of the web experience is to make the brand shine. The original website’s shopping & checkout experience was slow & difficult to navigate for users. The inconsistent design elements made it hard to use, especially on mobile. And all this for a monthly operational cost that was nonsensically high.
+
+Our initial meetings with John revealed that he wanted the web experience to be in line with other streetwear brands his target audience might frequent. A survey of key precedents led us to prioritize speed, simplicity, and consistency.
 
 ## Process
-We first familiarized ourselves with the technology stack of the existing web application.  During this discovery phase, we learned that the the website was using JBoss, a Java-based web framework.  From there we replicated the the Flash functionality using native Web Audio APIs and integrated these changes into the JBoss codebase.  We also advised the transition of ScribJab to an SSL-only webserver configuration to ensure that modern browsers such as Chrome would allow the site to request microphone access.
+ACiD already had a strong brand identity, so we worked on a design system of typography and UI that complimented it. This presents a challenge distinct from creating a brand from scratch, but ensuring that UI elements are modular and anchored to ACiD’s visual language ensured appropriate font choice and stronger webpage layouts.
+
+The simplicity and directness of the brand carried forward into designing the user experience. A clearer sense of hierarchy within pages afforded the same between pages. The two-tiered navigation reduces the number of clicks users need to make to hop between pages. And using a flexible grid system means the website functions flawlessly on both mobile and desktop.
 
 ## Results
-After testing, we were ready to deploy our modernized version of ScribJab and users were once able to record their stories through the website.  It was great to once again hear everyone's creative stories read in their own bilingual voices!
