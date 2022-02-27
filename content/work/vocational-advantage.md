@@ -4,8 +4,8 @@ type: Career Counselling
 when: Summer 2021
 link: https://www.vocationaladvantage.ca/
 hero: hero.jpg
-seo: Learn about how Q5 brought authenticity and authority to a career counseller's brand
-summary: Learn about how Q5 brought authenticity and authority to a career counseller's brand
+seo: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
+summary: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
 tags:
     - Branding
     - Graphic Design
@@ -15,15 +15,39 @@ featured:
     image: hero.jpg
 order: 3
 ---
+## Background
+Alison is a career counselor who came to us needing a stronger brand identity and clear printable graphics for use in her counseling practice, Vocational Advantage.
+
 ## Objectives
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**1.** Develop a trustworthy brand that will stand the test of time
+
+**2.** Update her digital presence to match the new brand
+
+**3.** Develop a set of parsable and printable word templates for her use as a counselor
 
 ## Process
 
-### Thing
-Tempus imperdiet nulla malesuada pellentesque elit eget gravida. In hac habitasse platea dictumst vestibulum. Quam quisque id diam vel. Egestas congue quisque egestas diam in arcu cursus euismod quis. Convallis posuere morbi leo urna molestie at. Venenatis cras sed felis eget. Urna et pharetra pharetra massa massa ultricies mi quis hendrerit. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Ullamcorper eget nulla facilisi etiam dignissim diam.
+### Branding
+<div class="center-text">
+<nuxt-picture src="/work/vocational-advantage/va-concept.jpg" width="200"></nuxt-picture>
+<br><br><br>
+</div>
 
-### Original Website
+**LOGOMARK + LOGOTYPE**: The loop logo evokes switching things up, starting new while the logotype uses Montserrat, a modern and clean font that connotes authority.
 
-## Testimonial
-Testimonial
+**DEEPER MEANING**: Loop arrows designed to represent V.A. for Vocational Advantage.
+
+**COLOUR**: As it is a warm and radiant color, this faded amber is associated with energy. Its vibrance can promote feelings of happiness and inspire boldness. In color psychology, amber is thought to symbolize and promote vitality, confidence and safety.
+
+<br>
+
+### Website
+We then integrated with Alison's current Squarespace website, implementing the new brand colours, logo and type.
+
+<br>
+
+### Templates
+When a client hires Alison, she follows a repeatable process to help guide them towards well-fitting careers. We were tasked with creating two professional template documents that would save her time and help her focus on quality guidance. The first allowed Alison to document the personality exploration process with the client and the second was a final report template that would provide the client with a comprehensive summary of the career counseling.
+
+## Results
+With a new brand, set of re-usable templates, and updated website, Vocational Advantage was in a great place to highlight and augment Alison's strengths as a councilor.
