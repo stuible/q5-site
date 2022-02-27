@@ -52,6 +52,20 @@ export default {
     line-height: 1.5;
   }
 
+  ol {
+    list-style: decimal;
+    padding-left: 1em;
+    // list-style-position: inside;
+
+    li::marker {
+      font-weight: bold;
+    }
+  }
+
+  li:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
+
   a {
     border-bottom: 1px solid black;
     padding-bottom: 0.5em;
