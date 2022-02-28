@@ -26,7 +26,7 @@ Mike came to us looking to create a hub which would centralize his growing onlin
 3. A performant and lightweight website that Mike could easily update
 
 ## Process
-Mike works in an industry where trust is paramount, and his brand needed to reflect that. In order to design the brand, we presented two design directions with major aesthetic distinctions. We collaborated with Mike to synthesize a professional and approachable brand design, including a simple yet powerful logo.
+Mike works in an industry where trust is paramount, and his brand needed to reflect that. In order to design the brand, we presented two directions with major aesthetic distinctions. We collaborated with Mike to synthesize a professional and approachable brand design, including a simple yet powerful logo.
 
 We then designed a set of interactive prototypes that communicate the experience more dynamically and helped ensure that Mike has a clear understanding of what the completed website will feel like.
 
