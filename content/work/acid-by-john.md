@@ -29,11 +29,19 @@ The original website’s shopping & checkout flow was slow & difficult to naviga
 3. Reduce monthly operating costs and move to a more flexible platform
 
 ## Process
+<nuxt-picture 
+    src="/work/acid-by-john/product-page.jpg" 
+    width="480" 
+    style="box-shadow: 0px 3px 10px #f0f0f0;"></nuxt-picture>
+
+<br>
+<br>
+
 ACiD’s products have a very strong identity, so we developed a design system of typography and UI that would accent this. We opted for clean stencil (Mono Spec) and sans serif (Manrope) fonts to appear modern while staying true to John’s streetwear aesthetic.
 
 Clear navigation hierarchy reduces the number of clicks users need to make to hop between pages. Using a flexible grid system means the website functions flawlessly on both mobile and desktop.
 
-Switching from WIX eCommerce to a custom JAMstack solution using Snipcart allowed for a lightweight back-end with complete flexibility in designing the front-end. This resulted in a faster, and more user friendly website at 20% of the operating cost.
+Switching from WIX e-commerce to a custom JAMstack solution using Snipcart allowed for a lightweight back-end with complete flexibility in designing the front-end. This resulted in a faster, and more user friendly website at 20% of the operating cost.
 
 ## Results
 With customers flocking to ACiD’s modern and flexible e-commerce experience, John is able to focus on his work, expanding ACiD’s inventory, and continue growing his business.
