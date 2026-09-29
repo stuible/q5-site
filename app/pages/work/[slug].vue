@@ -5,7 +5,7 @@
         :src="heroSrc"
         class="hero"
         :alt="work.title"
-        sizes="100vw lg:1080px"
+        sizes="sm:100vw md:100vw lg:1080px"
         :img-attrs="{ fetchpriority: 'high' }"
         :preload="{ fetchPriority: 'high' }"
       />

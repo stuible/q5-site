@@ -24,6 +24,14 @@ img {
     max-width: 100%;
 }
 
+// A <NuxtPicture> srcset can offer widths larger than the source file. The image
+// server won't upscale, so on high-DPI screens the browser would draw those at a
+// fraction of their size. Fill the container instead, as Nuxt 2 did.
+picture > img:not([width]) {
+    width: 100%;
+    height: auto;
+}
+
 .nuxt-content {
     max-width: 40em;
 

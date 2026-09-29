@@ -7,7 +7,7 @@
           <NuxtPicture
             :src="`/work/${slug(item)}/${item.featured.image}`"
             :alt="item.title"
-            sizes="100vw md:50vw lg:540px"
+            sizes="sm:100vw md:50vw lg:540px"
             loading="lazy"
           />
         </div>

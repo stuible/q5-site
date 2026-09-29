@@ -84,7 +84,9 @@ export default defineNuxtConfig({
   },
 
   image: {
-    // Pre-renders optimised copies of images during `nuxt generate`
+    // Pre-renders optimised copies of images during `nuxt generate`. Pinned so
+    // Netlify builds don't auto-switch to the Netlify Image CDN.
+    provider: 'ipx',
     quality: 80,
     format: ['avif', 'webp'],
   },

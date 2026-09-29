@@ -2,6 +2,7 @@
 title: Vocational Advantage
 type: Career Counselling
 when: Summer 2021
+link: https://www.vocationaladvantage.ca/
 hero: hero.jpg
 description: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
 summary: Q5 brought authenticity and authority to a career counsellor's brand
