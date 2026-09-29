@@ -5,7 +5,7 @@ hero: hero.jpg
 link: https://acidbyjohn.com/
 when: Fall 2021
 description: Learn about how Q5 created a fast e-commerce website for a boutique clothing brand
-summary: Learn about how Q5 created a fast e-commerce website for a boutique clothing brand
+summary: Q5 created a fast e-commerce website for a boutique clothing brand
 tags:
     - Web Development
     - Design

@@ -5,7 +5,7 @@ when: Spring 2021
 link: https://sonikasaggi.com/
 hero: hero.png
 description: Learn about how Q5 refreshed a Financial Advisor's brand and website
-summary: Learn about how Q5 refreshed a Financial Advisor's brand and website
+summary: Q5 refreshed a Financial Advisor's brand and website
 tags:
     - Branding
     - Web Design

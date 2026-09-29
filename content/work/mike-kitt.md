@@ -5,7 +5,7 @@ when: Spring 2022
 link: https://mikekitt.com/
 hero: hero.jpg
 description: Learn about how Q5 gave a business executive a new brand and website
-summary: Learn about how Q5 gave a business executive a new brand and website
+summary: Q5 gave a business executive a new brand and website
 tags:
     - Branding
     - Web Design
