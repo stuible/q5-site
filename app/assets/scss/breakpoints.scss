@@ -1,0 +1,24 @@
+@use "sass:map";
+
+$breakpoints: (
+  phone: 450px, // Phones
+  thone: 600px, // Slightly Larger Phones
+  phablet: 750px, // Obnoxiously Large Phones
+  tablet: 950px, // Tablets
+  desktop: 1080px, // Desktops
+  desktophd: 1200px // Large Desktops
+);
+
+@function bp($breakpoint) {
+  @return map.get($breakpoints, $breakpoint);
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: bp($breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}

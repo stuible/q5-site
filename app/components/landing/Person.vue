@@ -1,0 +1,86 @@
+<template>
+  <div class="person">
+    <div class="person-left">
+      <img
+        :src="icon"
+        :alt="`${name}'s Logo`"
+        class="person-icon"
+      >
+    </div>
+    <div>
+      <h3 class="name">{{ name }}</h3>
+      <div class="bio">{{ bio }}</div>
+      <a :href="url" target="_blank" class="url">Selected Works</a>
+    </div>
+  </div>
+</template>
+
+<script setup>
+defineProps({
+  name: { type: String, required: true },
+  bio: { type: String, required: true },
+  url: { type: String, required: true },
+  icon: { type: String, required: true },
+});
+</script>
+
+<style lang="scss">
+.person {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  column-gap: 1em;
+  margin-bottom: 0.25em;
+
+  @include breakpoint(phablet) {
+    grid-template-columns: 4rem auto;
+    olumn-gap: 2em;
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 5rem auto;
+    column-gap: 2em;
+  }
+
+  .person-left {
+    place-self: start center;
+  }
+
+  .person-icon {
+    max-height: 3rem;
+    margin: 0 auto;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      max-height: 4rem;
+    }
+  }
+
+  .name {
+    margin: 0;
+    margin-bottom: 0.15rem;
+    font-size: 1em;
+
+    @include breakpoint(phone) {
+      font-size: 1.8em;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2em;
+    }
+  }
+
+  .bio {
+    margin-bottom: 1rem;
+  }
+
+  .url {
+    padding-bottom: 0.2em;
+    border-bottom: solid black 0.175em;
+    transition: padding 75ms linear;
+
+    &:hover {
+      padding-bottom: 0.4em;
+    }
+  }
+}
+</style>

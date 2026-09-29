@@ -4,7 +4,7 @@ type: Education
 hero: hero.jpg
 link: https://www.scribjab.com/
 when: Spring 2021
-seo: Learn about how Q5 replaced a broken Adobe Flash audio recorder with one that uses native and modern web standards
+description: Learn about how Q5 replaced a broken Adobe Flash audio recorder with one that uses native and modern web standards
 summary: Learn about how Q5 replaced a broken Adobe Flash audio recorder with one that uses native and modern web standards
 tags:
     - Web Development

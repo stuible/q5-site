@@ -4,7 +4,7 @@ type: Insurance Services
 when: Spring 2021
 link: https://sonikasaggi.com/
 hero: hero.png
-seo: Learn about how Q5 refreshed a Financial Advisor's brand and website
+description: Learn about how Q5 refreshed a Financial Advisor's brand and website
 summary: Learn about how Q5 refreshed a Financial Advisor's brand and website
 tags:
     - Branding
@@ -22,7 +22,7 @@ Sonika Saggi is a Financial Advisor based out of Surrey, BC, and has worked full
 Sonika approached us with the desire to revitalize her digital presence and attract clients in ways above and beyond traditional word-of-mouth. In particular, she wanted to expand her customer base to include younger families who had grown up with the internet and had a keener eye for the quality of a brand's digital presence.
 
 ## Process
-<nuxt-picture src="/work/saggi/oldsite.jpg"></nuxt-picture>
+<nuxt-picture src="/work/saggi/oldsite.jpg" alt="Sonika Saggi's previous website"></nuxt-picture>
 *Sonika's Previous Website*
 
 ### 1. Site Audit
@@ -40,7 +40,7 @@ The website was built using Craft CMS, our content management system of choice. 
 ## Results
 Through updated modern design, Sonika now has a website and brand that reflects her state-of-the-art services.
 
-<nuxt-picture src="/work/saggi/lighthouse.jpg"></nuxt-picture>
+<nuxt-picture src="/work/saggi/lighthouse.jpg" alt="Google Lighthouse scores for the old and new websites"></nuxt-picture>
 ### Lighthouse results
 Using modern web development methods, we made measurable improvements to sonikasaggi.com's Google Lighthouse score.  This score is based on the website's performance, accessibility, and use of best practices and is an important factor in the site's search ranking.
 

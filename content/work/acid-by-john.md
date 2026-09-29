@@ -4,7 +4,7 @@ type: Clothing
 hero: hero.jpg
 link: https://acidbyjohn.com/
 when: Fall 2021
-seo: Learn about how Q5 created a fast e-commerce website for a boutique clothing brand
+description: Learn about how Q5 created a fast e-commerce website for a boutique clothing brand
 summary: Learn about how Q5 created a fast e-commerce website for a boutique clothing brand
 tags:
     - Web Development
@@ -30,7 +30,8 @@ The original website’s shopping & checkout flow was slow & difficult to naviga
 
 ## Process
 <nuxt-picture 
-    src="/work/acid-by-john/product-page.jpg" 
+    src="/work/acid-by-john/product-page.jpg"
+    alt="Acid By John product page"
     width="480" 
     style="box-shadow: 0px 3px 10px #f0f0f0;"></nuxt-picture>
 

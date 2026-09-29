@@ -1,0 +1,41 @@
+@use "globals" as *;
+
+html {
+    font-family: neue-haas-unica, sans-serif;
+}
+
+h1 {
+    // font-family: 'Neue Haas Unica W1G';
+    letter-spacing: -0.04em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.nuxt-content {
+    max-width: 40em;
+
+    h2 {
+        font-size: 1.5em;
+
+        @include breakpoint(tablet) {
+            font-size: 2em;
+        }
+    }
+
+    // p {
+        
+    // }
+}

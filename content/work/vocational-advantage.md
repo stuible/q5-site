@@ -2,9 +2,8 @@
 title: Vocational Advantage
 type: Career Counselling
 when: Summer 2021
-link: https://www.vocationaladvantage.ca/
 hero: hero.jpg
-seo: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
+description: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
 summary: Learn about how Q5 brought authenticity and authority to a career counsellor's brand
 tags:
     - Branding
@@ -29,7 +28,7 @@ Alison is a career counselor who came to us needing a stronger brand identity an
 
 ### Branding
 <div class="center-text">
-<nuxt-picture src="/work/vocational-advantage/va-concept.jpg" width="200"></nuxt-picture>
+<nuxt-picture src="/work/vocational-advantage/va-concept.jpg" width="200" alt="Vocational Advantage logo concept sketch"></nuxt-picture>
 <br><br><br>
 </div>
 
