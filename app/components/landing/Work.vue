@@ -35,6 +35,7 @@ const slug = (item) => item.stem.split("/").pop();
 .works {
   a {
     img {
+      border-radius: 0.35em;
       transition: transform 100ms linear;
     }
     &:hover {
