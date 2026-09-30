@@ -24,7 +24,7 @@
   font-weight: bold;
   justify-content: space-between;
 
-  font-size: 0.75em;
+  font-size: shrink-below($logo-text-shrink-below, $mobile-font-size * 0.75, $container-mobile-padding * 2);
   @include breakpoint(phone) {
     font-size: 1em;
   }

@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 
 $breakpoints: (
   phone: 450px, // Phones
@@ -11,6 +12,13 @@ $breakpoints: (
 
 @function bp($breakpoint) {
   @return map.get($breakpoints, $breakpoint);
+}
+
+// $size at screens $width and wider; below that it scales down in proportion to
+// the content width (the screen minus $inset of side margins), keeping the
+// proportions it has at $width
+@function shrink-below($width, $size, $inset: 0px) {
+  @return min(#{$size}, calc((100vw - #{$inset}) * #{math.div($size, $width - $inset)}));
 }
 
 @mixin breakpoint($breakpoint) {
