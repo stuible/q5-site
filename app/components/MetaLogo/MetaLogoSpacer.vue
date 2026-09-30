@@ -18,7 +18,6 @@
 
   @include breakpoint(thone) {
     position: initial;
-    padding-bottom: 0;
     padding: 100px 0;
   }
 }
@@ -27,17 +26,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-
-  // >div {
-  //   height: 100%;
-  // }
-//   display: inline-flex;
-//   justify-content: center;
-//   align-items: flex-start;
-
-//   > * {
-//       flex-basis: content;
-//   }
 
   @include breakpoint(thone) {
     position: initial;

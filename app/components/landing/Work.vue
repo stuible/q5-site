@@ -73,33 +73,11 @@ const slug = (item) => item.stem.split("/").pop();
   }
 }
 
-// .type {
-//   margin: 0;
-//   text-transform: uppercase;
-//   font-size: 0.85em;
-//   display: none;
-
-//   @include breakpoint(phone) {
-//     display: block;
-//   }
-
-//   @include breakpoint(phablet) {
-//     display: none;
-//   }
-
-//   @include breakpoint(tablet) {
-//     display: block;
-//   }
-// }
-
 .summary {
-  // flex-basis: 75%;
   font-size: 1em;
   margin: 0;
   margin-top: 0.5em;
   margin-right: 6%;
-  // font-weight: bold;
-  // color: $colourDark;
 
   @include breakpoint(thone) {
     font-size: 1.25em;
@@ -109,14 +87,10 @@ const slug = (item) => item.stem.split("/").pop();
   }
 }
 
-// .tags {
-// }
-
 .tags {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  // align-content: flex-start;
   font-size: 0.57em;
   padding: 0.5em 0;
   text-transform: uppercase;
@@ -124,9 +98,6 @@ const slug = (item) => item.stem.split("/").pop();
 
   @include breakpoint(phone) {
     font-size: 0.7em;
-    // max-width: 20em;
-    // text-align: right;
-    // justify-content: flex-end;
   }
 
   li {

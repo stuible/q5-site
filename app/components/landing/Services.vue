@@ -20,7 +20,6 @@
 <style lang="scss">
 #services {
   display: flex;
-  justify-content: center;
   letter-spacing: -0.05em;
   font-weight: bold;
   justify-content: space-between;
@@ -40,10 +39,6 @@
   }
 
   li {
-    // &:first-child {
-
-    // }
-
     &:last-child,
     &:first-child {
       width: 50%;

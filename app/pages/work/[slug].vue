@@ -79,7 +79,6 @@ useSchemaOrg([
   ol {
     list-style: decimal;
     padding-left: 1em;
-    // list-style-position: inside;
 
     li::marker {
       font-weight: bold;
@@ -140,8 +139,6 @@ h1 {
 }
 
 header {
-  // display: flex;
-
   @include breakpoint(phone) {
     display: flex;
   }
@@ -149,9 +146,6 @@ header {
   .titles {
     flex-grow: 1;
     margin-right: 2em;
-  }
-
-  .project-link {
   }
 }
 

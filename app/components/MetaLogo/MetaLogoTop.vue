@@ -31,8 +31,6 @@ video {
   }
 }
 .top-logo {
-  // display: block;
-
   @include breakpoint(phone) {
     display: none;
   }

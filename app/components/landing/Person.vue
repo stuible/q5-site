@@ -31,11 +31,6 @@ defineProps({
   column-gap: 1em;
   margin-bottom: 0.25em;
 
-  @include breakpoint(phablet) {
-    grid-template-columns: 4rem auto;
-    olumn-gap: 2em;
-  }
-
   @include breakpoint(tablet) {
     grid-template-columns: 5rem auto;
     column-gap: 2em;

@@ -61,22 +61,11 @@ const steps = [
   }
 
   .step {
-    // display: grid;
-    // grid-template-columns: auto 1fr;
-    // grid-template-rows: auto auto;
-    // align-items: start;
-    // gap: 0px 0px;
-    // grid-template-areas:
-    //   "logo name"
-    //   "logo description";
-
     h3 {
-      // grid-area: name;
       margin: 0;
     }
 
     p {
-      // grid-area: description;
       font-size: 1rem;
       font-weight: normal;
       max-width: 22em;
@@ -85,7 +74,6 @@ const steps = [
     .icon {
       width: 4rem;
       padding-bottom: 1em;
-      // grid-area: logo;
       height: auto;
     }
   }

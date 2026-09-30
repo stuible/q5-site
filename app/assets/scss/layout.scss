@@ -8,22 +8,4 @@
     @include breakpoint(phone) {
         padding: 0 $container-padding;
     }
-
-    // @include breakpoint(phablet) {
-    //     max-width: bp(phablet) + 100;
-    //     padding: 0;
-    // }
-
-    // @include breakpoint(tablet) {
-    //     max-width: bp(tablet);
-    //     padding: 0;
-    // }
-
-    // @include breakpoint(desktop) {
-    //     max-width: bp(desktop);
-    // }
-
-    // @include breakpoint(desktophd) {
-    //     max-width: bp(desktophd);
-    // }
 }
