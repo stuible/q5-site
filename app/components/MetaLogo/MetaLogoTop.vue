@@ -21,16 +21,6 @@ defineProps({ email: { type: String, default: "" } });
 </script>
 
 <style scoped lang="scss">
-.meta-logo-section {
-  // Sticks right where it rests, one gutter from the top, and rolls in place
-  top: $container-mobile-padding;
-  position: sticky;
-  z-index: 1;
-  @include breakpoint(phone) {
-    position: static;
-    top: $container-padding;
-  }
-}
 video {
   object-fit: inherit;
 

@@ -1,20 +1,22 @@
 <template>
   <main class="container">
-    <meta-logo-top :email="email" class="landing-logo-top" />
-    <meta-logo-spacer>
-      <h1 id="tagline" v-fade-out>
-        Q5 develops digital solutions for growing businesses.
-      </h1>
-    </meta-logo-spacer>
-    <meta-logo-middle v-fade-out />
-    <meta-logo-spacer>
-      <div id="services-container" v-fade-out>
-        <services />
-      </div>
-    </meta-logo-spacer>
-    <meta-logo-bottom v-fade-out />
+    <meta-logo-hero until="#us">
+      <meta-logo-top :email="email" class="landing-logo-top" />
+      <meta-logo-spacer>
+        <h1 id="tagline" v-fade-out>
+          Q5 develops digital solutions for growing businesses.
+        </h1>
+      </meta-logo-spacer>
+      <meta-logo-middle v-fade-out />
+      <meta-logo-spacer>
+        <div id="services-container" v-fade-out>
+          <services />
+        </div>
+      </meta-logo-spacer>
+      <meta-logo-bottom v-fade-out />
+    </meta-logo-hero>
     <spacer />
-    <h2 v-fade-out>Us</h2>
+    <h2 id="us" v-fade-out>Us</h2>
     <div id="about">
       <p v-fade-out>
         Q5 is a Vancouver-based web design and development consultancy. We are a
