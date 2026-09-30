@@ -86,8 +86,8 @@ $roll-distance: 80px;
   justify-content: center;
   gap: 0.5em;
   // Full size from 375px-wide phones up; below that it scales with the bar's width
-  // (5.2cqw is 0.85rem on the 295px-wide bar of a 375px phone)
-  font-size: min(0.85rem, 5.2cqw);
+  // (4.9cqw is 0.85rem on the 295px-wide bar of a 375px phone)
+  font-size: min(0.85rem, 4.9cqw);
   letter-spacing: 0.01em;
   backface-visibility: hidden;
 }
