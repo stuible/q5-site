@@ -1,11 +1,12 @@
 <template>
   <div>
-    <Nav :type="route.path === '/' ? '' : 'solid'" />
+    <Nav :type="homeNav ? '' : 'solid'" />
     <slot />
     <Footer />
   </div>
 </template>
 
 <script setup>
-const route = useRoute()
+// Set in app.vue, in step with the page transition
+const homeNav = useState('home-nav')
 </script>

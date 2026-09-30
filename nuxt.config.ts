@@ -14,8 +14,6 @@ export default defineNuxtConfig({
   ],
 
   app: {
-    // Nuxt 2 used a fading "page" transition by default
-    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en-CA' },
       meta: [

@@ -59,38 +59,56 @@ nav {
 <style lang="scss">
 // Home page on phones: the nav overlays the hero, whose pinned Q5 mark shrinks
 // into the logo spot (see MetaLogoHero). The CTA sits under the mark's top stroke
-// and is uncovered, right to left, as the stroke retreats. Not scoped so the
-// keyframe name stays unhashed for MetaLogoHero's JS fallback.
+// and fades in over the second half of the shrink. Not scoped so the
+// keyframe names stay unhashed for MetaLogoHero's JS fallback.
 @media (max-width: 449px) and (prefers-reduced-motion: no-preference) {
   #top-nav.home {
     margin-bottom: -$nav-height-mobile;
 
+    // Takes over from the shrinking mark the moment it docks
     #nav-logo-link {
-      visibility: hidden;
+      animation: hero-logo-handoff linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 var(--shrink-end, 600px);
     }
 
     #cta {
-      animation: hero-cta-reveal linear both;
+      animation: hero-cta-fade linear both;
       animation-timeline: scroll(root block);
-      animation-range: 0 var(--reveal-end, 300px);
+      // Stays hidden until the mark is halfway through shrinking, then fades in
+      animation-range: calc(var(--shrink-end, 600px) * 0.5) var(--shrink-end, 600px);
     }
   }
 
   @supports not (animation-timeline: scroll()) {
-    #top-nav.home #cta {
+    #top-nav.home #cta,
+    #top-nav.home #nav-logo-link {
       animation-duration: 1s;
       animation-play-state: paused;
     }
   }
 }
 
-@keyframes hero-cta-reveal {
-  from {
-    clip-path: inset(0 0 0 100%);
+@keyframes hero-logo-handoff {
+  from,
+  99.9% {
+    visibility: hidden;
   }
 
   to {
-    clip-path: inset(0 0 0 0);
+    visibility: visible;
+  }
+}
+
+@keyframes hero-cta-fade {
+  // Hidden (and untappable) only while fully transparent
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 </style>

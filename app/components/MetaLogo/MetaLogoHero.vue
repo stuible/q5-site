@@ -3,7 +3,7 @@
     On phones the home hero is the whole Q5 mark: top stroke, tagline, middle,
     services, bottom. It's pinned while the page scrolls normally beneath it and
     shrinks into the nav's logo spot, docking just as `until` reaches the nav. Its
-    words fade out on the way, and the nav's CTA is uncovered as the top stroke
+    words fade out on the way, and the nav's CTA fades in as the top stroke
     retreats from it. Larger screens render the pieces in normal flow.
   -->
   <div class="hero-mark-space">
@@ -19,13 +19,13 @@ const props = defineProps({
   until: { type: String, required: true },
 });
 
-const VARS = ["--shrink-end", "--reveal-end", "--mark-scale-end", "--mark-shift-x", "--mark-shift-y"];
-// Words finish fading halfway through the shrink
-const WORDS_END = 0.5;
+const VARS = ["--shrink-end", "--mark-scale-end", "--mark-shift-x", "--mark-shift-y"];
+// Words finish fading, and the nav's CTA starts fading in, halfway through the shrink
+const HALFWAY = 0.5;
 
 const mark = ref(null);
 const root = () => document.documentElement;
-let media, frame = 0, ends = null;
+let media, frame = 0, ranges = null;
 
 // Measures where the mark has to end up, and over how much scroll, and hands
 // those to the CSS animations as custom properties
@@ -36,32 +36,35 @@ function measure() {
   const el = mark.value;
   const nav = document.getElementById("top-nav");
   const logo = document.getElementById("nav-logo").getBoundingClientRect();
-  const cta = document.getElementById("cta").getBoundingClientRect();
   const target = document.querySelector(props.until);
 
   // Untransformed geometry of the pinned mark (a transform doesn't affect these)
   const { top, left } = getComputedStyle(el);
   const markTop = parseFloat(top), markLeft = parseFloat(left), width = el.offsetWidth;
 
-  const scaleEnd = logo.width / width;
+  // Match the logo's height (its box is a little wider than the drawn logo), centred
+  const scaleEnd = logo.height / el.offsetHeight;
+  const shiftX = logo.left + (logo.width - width * scaleEnd) / 2 - markLeft;
   const shrinkEnd = target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight;
-  // The top stroke's right edge moves linearly from the mark's right edge to the
-  // logo's; the CTA is fully uncovered once that edge passes the CTA's left side
-  const revealAt = (1 - (cta.left - markLeft) / width) / (1 - scaleEnd);
-  const revealEnd = Math.min(Math.max(revealAt, 0), 1) * shrinkEnd;
 
   style.setProperty("--shrink-end", `${shrinkEnd}px`);
-  style.setProperty("--reveal-end", `${revealEnd}px`);
   style.setProperty("--mark-scale-end", scaleEnd);
-  style.setProperty("--mark-shift-x", `${logo.left - markLeft}px`);
+  style.setProperty("--mark-shift-x", `${shiftX}px`);
   style.setProperty("--mark-shift-y", `${logo.top - markTop}px`);
 
-  ends = { "hero-mark-shrink": shrinkEnd, "hero-words-fade": shrinkEnd * WORDS_END, "hero-cta-reveal": revealEnd };
+  // Scroll range [start, end] of each animation, mirroring their animation-range
+  ranges = {
+    "hero-mark-shrink": [0, shrinkEnd],
+    "hero-mark-handoff": [0, shrinkEnd],
+    "hero-logo-handoff": [0, shrinkEnd],
+    "hero-words-fade": [0, shrinkEnd * HALFWAY],
+    "hero-cta-fade": [shrinkEnd * HALFWAY, shrinkEnd],
+  };
   if (useFallback) scrub();
 }
 
 function clearVars() {
-  ends = null;
+  ranges = null;
   for (const name of VARS) root().style.removeProperty(name);
 }
 
@@ -71,11 +74,12 @@ const useFallback = import.meta.client && !CSS.supports("animation-timeline: scr
 
 function scrub() {
   frame = 0;
-  if (!ends) return;
+  if (!ranges) return;
   for (const animation of document.getAnimations()) {
-    const end = ends[animation.animationName];
-    if (end === undefined) continue;
-    animation.currentTime = Math.min(Math.max(window.scrollY / end, 0), 1) * 1000;
+    const range = ranges[animation.animationName];
+    if (!range) continue;
+    const [start, end] = range;
+    animation.currentTime = Math.min(Math.max((window.scrollY - start) / (end - start), 0), 1) * 1000;
   }
 }
 
@@ -98,7 +102,9 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", measure);
   window.removeEventListener("scroll", onScroll);
   cancelAnimationFrame(frame);
-  clearVars();
+  // The custom properties stay set: this page is still fading out, and they're only
+  // read while the nav is in its home mode
+  ranges = null;
 });
 </script>
 
@@ -122,7 +128,10 @@ onBeforeUnmount(() => {
     transform-origin: 0 0;
     // Lets taps through to the nav once docked; the email link opts back in
     pointer-events: none;
-    animation: hero-mark-shrink linear both;
+    // Shrinks into the logo spot, then hands over to the nav's real logo on docking
+    animation: hero-mark-shrink linear both, hero-mark-handoff linear both;
+    // A multi-animation shorthand sets 0s durations, which a scroll timeline treats as already finished
+    animation-duration: auto;
     animation-timeline: scroll(root block);
     animation-range: 0 var(--shrink-end, 600px);
 
@@ -151,6 +160,12 @@ onBeforeUnmount(() => {
 @keyframes hero-mark-shrink {
   to {
     transform: translate(var(--mark-shift-x, 0), var(--mark-shift-y, 0)) scale(var(--mark-scale-end, 0.08));
+  }
+}
+
+@keyframes hero-mark-handoff {
+  to {
+    visibility: hidden;
   }
 }
 

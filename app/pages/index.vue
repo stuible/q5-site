@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container home">
     <meta-logo-hero until="#us">
       <meta-logo-top :email="email" class="landing-logo-top" />
       <meta-logo-spacer>
@@ -27,7 +27,6 @@
         We want to work with you to bring concrete results to your business
         through web solutions.
       </p>
-      <!-- <p v-fade-out> 🧠 🔬 📐 👨‍🎨 👩‍💻 🕸 🏁 🤗</p> -->
     </div>
     <spacer />
     <h2 v-fade-out>Work</h2>
@@ -88,10 +87,6 @@ h2 {
   @include breakpoint(thone) {
     padding-top: 150px;
   }
-
-  &.solid {
-    padding-top: 0px;
-  }
 }
 
 #tagline {
@@ -111,7 +106,8 @@ h2 {
   }
 }
 
-main {
+// Home page only (this block isn't scoped): the hero sits one gutter below the top
+main.home {
   margin-top: $container-mobile-padding !important;
 
   @include breakpoint(phone) {
@@ -147,28 +143,6 @@ main {
     font-size: 2em;
   }
 }
-
-// #projects {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   gap: 2em 2em;
-
-//   @include breakpoint(phone) {
-//     grid-template-columns: 1fr 1fr;
-//   }
-
-//   @include breakpoint(phablet) {
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
-//   @include breakpoint(tablet) {
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-//   }
-
-//   li {
-//     height: 50px;
-//     background-color: black;
-//   }
-// }
 
 #who {
   display: grid;
