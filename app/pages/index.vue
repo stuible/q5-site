@@ -117,6 +117,11 @@ main.home {
   @include breakpoint(thone) {
     margin-top: 0px !important;
   }
+
+  // Avoid lone words on last lines and even out paragraph line lengths
+  :is(h1, h2, h3, p) {
+    text-wrap: pretty;
+  }
 }
 
 #services-container {
