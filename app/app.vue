@@ -5,8 +5,13 @@
 </template>
 
 <script setup>
+import unicaRegular from '~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff2?url'
+import unicaBold from '~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff2?url'
+
 useHead({
   titleTemplate: (title) => (title ? `${title} | Q5` : 'Q5 - Web Solutions'),
+  // Fetch both weights with the page rather than after the CSS is parsed
+  link: [unicaRegular, unicaBold].map(href => ({ rel: 'preload', as: 'font', type: 'font/woff2', href, crossorigin: '' })),
 })
 
 const route = useRoute()

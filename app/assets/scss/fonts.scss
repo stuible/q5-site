@@ -1,35 +1,23 @@
-// Not currently used, using adobe fonts instead
+// Self-hosted Neue Haas Unica (Monotype). The family name is deliberately unique so
+// it can never match a copy installed on the visitor's computer: text in this font
+// always comes from these files, as everyone else sees it.
+//
+// The Nimbus Sans files in assets/fonts aren't used.
 
 @font-face {
-    font-family: 'Neue Haas Unica W1G';
-    src: url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff2') format('woff2'),
-        url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: "Q5 Neue Haas Unica";
+    src: url("~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff2") format("woff2"),
+        url("~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff") format("woff");
+    font-weight: 400;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Unica W1G';
-    src: url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
-        url('~assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: "Q5 Neue Haas Unica";
+    src: url("~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff2") format("woff2"),
+        url("~/assets/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.woff") format("woff");
+    font-weight: 700;
     font-style: normal;
-    font-display: block;
-}
-
-@font-face {
-    font-family: "Nimbus Sans";
-    src: url("~assets/fonts/NimbusSansL/nimbussans-bold.woff2") format("woff2"),
-        url("~assets/fonts/NimbusSansL/nimbussans-bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Nimbus Sans";
-    src: url("~assets/fonts/NimbusSansL/nimbussans-regular.woff2") format("woff2"),
-        url("~assets/fonts/NimbusSansL/nimbussans-regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
 }
