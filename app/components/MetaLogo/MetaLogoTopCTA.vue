@@ -6,10 +6,14 @@
   -->
   <a :href="`mailto:${email}`" class="logo-top-cta">
     <span ref="cube" class="cube">
-      <span class="face front">{{ email }}</span>
+      <span class="face front">
+        <span class="cta-label">{{ email }}</span>
+        <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" /></svg>
+      </span>
       <span class="face bottom" aria-hidden="true">
         <img src="~/assets/logo/logo.svg?url" alt="" class="cta-logo">
-        {{ email }}
+        <span class="cta-label">{{ email }}</span>
+        <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" /></svg>
       </span>
     </span>
   </a>
@@ -80,7 +84,25 @@ $roll-distance: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5em;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
   backface-visibility: hidden;
+}
+
+// Underline and arrow make it read as a link, not a label
+.cta-label {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
+.cta-arrow {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
 }
 
 .front {
