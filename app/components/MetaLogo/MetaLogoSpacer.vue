@@ -15,6 +15,8 @@
   // clip, not hidden: hidden makes this a scroll container, which would stop the
   // v-fade-out scroll timelines of its children from tracking the page
   overflow: clip;
+  // Its width is the logo's width: the text inside sizes itself from it (cqw)
+  container-type: inline-size;
 
   @include breakpoint(thone) {
     position: initial;

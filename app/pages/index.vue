@@ -90,7 +90,7 @@ h2 {
 }
 
 #tagline {
-  font-size: shrink-below($logo-text-shrink-below, $mobile-font-size, $container-mobile-padding * 2);
+  font-size: shrink-below($logo-text-shrink-below, $mobile-font-size);
 
   @include breakpoint(phone) {
     font-size: 1.5em;

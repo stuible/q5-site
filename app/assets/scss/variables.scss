@@ -1,11 +1,11 @@
 // Base font size on phones (below the thone breakpoint)
 $mobile-font-size: 17px;
 
-// Below this screen width, the text inside the phone hero's Q5 mark shrinks with
-// the mark so it can't clip
-$logo-text-shrink-below: 300px;
-
 $container-padding: 50px;
 $container-mobile-padding: $container-padding - 10;
 // Height of the sticky white nav below the desktop layout
 $nav-height-mobile: 105px;
+
+// The phone hero's Q5 mark width on a 300px screen (the screen minus the side
+// margins). When the mark is narrower, the text inside it shrinks with it
+$logo-text-shrink-below: 300px - $container-mobile-padding * 2;

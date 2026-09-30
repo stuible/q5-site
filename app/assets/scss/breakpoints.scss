@@ -14,11 +14,11 @@ $breakpoints: (
   @return map.get($breakpoints, $breakpoint);
 }
 
-// $size at screens $width and wider; below that it scales down in proportion to
-// the content width (the screen minus $inset of side margins), keeping the
-// proportions it has at $width
-@function shrink-below($width, $size, $inset: 0px) {
-  @return min(#{$size}, calc((100vw - #{$inset}) * #{math.div($size, $width - $inset)}));
+// $size while its container is at least $container-width wide; below that it
+// scales down with the container (cqw), keeping the proportions it has at that
+// width. Unlike vw, this measures the element itself, so scrollbars can't skew it.
+@function shrink-below($container-width, $size) {
+  @return min(#{$size}, #{math.div($size, $container-width) * 100cqw});
 }
 
 @mixin breakpoint($breakpoint) {
