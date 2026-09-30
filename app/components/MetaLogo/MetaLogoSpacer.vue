@@ -12,11 +12,12 @@
 .logo-spacer-container {
   padding-bottom: calc(224 / 620 * 100%);
   position: relative;
-  overflow: hidden;
+  // clip, not hidden: hidden makes this a scroll container, which would stop the
+  // v-fade-out scroll timelines of its children from tracking the page
+  overflow: clip;
 
   @include breakpoint(thone) {
     position: initial;
-    overflow: hidden;
     padding-bottom: 0;
     padding: 100px 0;
   }

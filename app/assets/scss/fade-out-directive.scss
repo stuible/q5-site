@@ -1,9 +1,35 @@
 @use "globals" as *;
 
+// Elements fade out as they scroll up behind the navbar: fully visible when their
+// top edge is $fade-distance below $fade-end, invisible once it reaches $fade-end.
+// Keep in sync with FADE_END in plugins/v-fade-out.js.
+$fade-end: 110px;
+// 100px normally, shrinking to 10px on very short (350–400px tall) windows
+$fade-distance: clamp(10px, (100vh - 350px) * 1.8 + 10px, 100px);
+
 .fade-out-directive {
-    transition: opacity 50ms linear;
+    // Driven by the scroll position itself, off the main thread, so the fade can't
+    // lag behind a fast scroll. Browsers without view timelines use the JS fallback.
+    @supports (animation-timeline: view()) {
+        animation: fade-out-directive linear both;
+        // Treat the viewport as starting $fade-end from the top
+        animation-timeline: view(block $fade-end 0px);
+        // From $fade-distance before the element's top reaches that line, to the line
+        animation-range: exit-crossing calc(-1 * #{$fade-distance}) exit-crossing 0%;
+    }
 
     @media (max-width: bp(thone)) {
         opacity: 1 !important;
+        animation: none;
+    }
+}
+
+@keyframes fade-out-directive {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
