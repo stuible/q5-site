@@ -1,68 +1,138 @@
 <template>
-  <div class="logo-top-cta">
-    <div class="inner">
-      <img
-        src="~/assets/logo/logo-white.svg?url"
-        alt=""
-        class="cta-logo"
-        :class="{ show: showLogo }"
-      >
-      <a :href="`mailto:${email}`">{{ email }}</a>
-    </div>
-  </div>
+  <!--
+    The top stroke of the Q5 mark, drawn as a 3D block as deep as it is tall.
+    Scrolling rolls it forward 90° to show its white underside with the mini logo.
+    Both faces are inside the one link, so the email CTA always works.
+  -->
+  <a :href="`mailto:${email}`" class="logo-top-cta">
+    <span ref="cube" class="cube">
+      <span class="face front">{{ email }}</span>
+      <span class="face bottom" aria-hidden="true">
+        <img src="~/assets/logo/logo.svg?url" alt="" class="cta-logo">
+        {{ email }}
+      </span>
+    </span>
+  </a>
 </template>
 
 <script setup>
 defineProps({ email: { type: String, default: "" } });
 
-const showLogo = ref(false);
+// Scroll distance over which the block rolls over (keep in sync with $roll-distance)
+const ROLL_DISTANCE = 80;
+
+const cube = ref(null);
+let frame = 0;
 
 function onScroll() {
-  showLogo.value = window.scrollY > 300;
+  cancelAnimationFrame(frame);
+  frame = requestAnimationFrame(() => {
+    const progress = Math.min(Math.max(window.scrollY / ROLL_DISTANCE, 0), 1);
+    cube.value?.style.setProperty("--roll", progress);
+  });
 }
 
-onMounted(() => document.addEventListener("scroll", onScroll, { passive: true }));
-onBeforeUnmount(() => document.removeEventListener("scroll", onScroll));
+// Browsers with scroll-driven animations handle this entirely in CSS
+const needsFallback = () => !CSS.supports("animation-timeline: scroll()");
+
+onMounted(() => {
+  if (!needsFallback()) return;
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+});
+onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 </script>
 
 <style scoped lang="scss">
+$roll-distance: 80px;
+
+// Registered so the scroll-driven animation can interpolate it
+@property --roll {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
 .logo-top-cta {
+  display: block;
   width: 100%;
-  padding-top: calc(138 / 726 * 100%);
-  position: relative;
-  background-color: black;
   max-width: bp(phone) - ($container-mobile-padding * 2);
+  aspect-ratio: 726 / 138;
+  // Lets the faces size their depth from the bar's height (cqh)
+  container-type: size;
+  perspective: 700px;
+  color: white;
+}
 
-  .inner {
-    position: absolute;
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
+.cube {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  // Rotate about the block's centre, not its front face
+  transform: translateZ(-50cqh) rotateX(calc(var(--roll) * 90deg));
+}
 
-    a {
-      color: white;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: black;
+  color: white;
+  transform: translateZ(50cqh);
+}
+
+.bottom {
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transform: rotateX(-90deg) translateZ(50cqh);
 }
 
 .cta-logo {
-  justify-self: center;
   position: absolute;
-  padding: 0 1em;
-  opacity: 0;
-  height: 70%;
-  transition: opacity 200ms linear;
+  left: 30cqh;
+  height: 46cqh;
+}
 
-  &.show {
-    opacity: 1;
+@supports (animation-timeline: scroll()) {
+  .cube {
+    animation: roll linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 $roll-distance;
+  }
+}
+
+@keyframes roll {
+  from {
+    --roll: 0;
+  }
+  to {
+    --roll: 1;
+  }
+}
+
+// Swap faces with a fade instead of rolling
+@media (prefers-reduced-motion: reduce) {
+  .cube {
+    transform: none;
+  }
+
+  .front {
+    transform: none;
+  }
+
+  .bottom {
+    transform: none;
+    opacity: var(--roll);
   }
 }
 </style>

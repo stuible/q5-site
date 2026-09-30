@@ -22,12 +22,19 @@ defineProps({ email: { type: String, default: "" } });
 
 <style scoped lang="scss">
 .meta-logo-section {
-  top: $container-mobile-padding;
+  // Sticks right where it rests, one gutter from the top, and rolls in place. The
+  // white padding above it keeps page content from showing through that gap.
   position: sticky;
+  top: 0;
+  margin-top: -$container-mobile-padding;
+  padding-top: $container-mobile-padding;
+  background-color: white;
   z-index: 1;
   @include breakpoint(phone) {
     position: static;
-    top: $container-padding;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: transparent;
   }
 }
 video {
