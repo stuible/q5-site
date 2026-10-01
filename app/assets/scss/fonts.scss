@@ -3,6 +3,10 @@
 // always comes from these files, as everyone else sees it.
 //
 // The Nimbus Sans files in assets/fonts aren't used.
+//
+// The metric overrides place text in its line exactly as the browser places
+// Helvetica, which the site was designed around: Unica's own metrics
+// (ascent 1.166em, descent 0.34em) would sit every line ~0.07em lower.
 
 @font-face {
     font-family: "Q5 Neue Haas Unica";
@@ -11,6 +15,9 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+    ascent-override: 92%;
+    descent-override: 23%;
+    line-gap-override: 0%;
 }
 
 @font-face {
@@ -20,4 +27,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
+    ascent-override: 92%;
+    descent-override: 23%;
+    line-gap-override: 0%;
 }
