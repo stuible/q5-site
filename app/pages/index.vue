@@ -38,6 +38,7 @@
         <person
           v-fade-out
           name="Josh Stuible"
+          class="josh"
           bio="Developer && Designer"
           url="https://stuible.com"
           :icon="jsLogo"
@@ -153,6 +154,10 @@ main.home {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em 1em;
+
+  .josh .person-icon {
+    margin-top: 0.35rem;
+  }
 
   li:not(:last-child) {
     margin-bottom: 2em;
